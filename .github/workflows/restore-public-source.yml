@@ -1,0 +1,49 @@
+name: Restore clean public source tree
+
+on:
+  push:
+    branches: [main]
+    paths: [github-upload-source.zip]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace flattened upload with verified source archive
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+          import shutil
+          root = Path.cwd()
+          staging = root / '.import-staging'
+          staging.mkdir()
+          with ZipFile(root / 'github-upload-source.zip') as source:
+              names = source.namelist()
+              assert len(names) == 189, len(names)
+              assert 'README.md' in names
+              assert 'covenant/vision/match.py' in names
+              assert 'archive/screen-lens-history.bundle' in names
+              assert all(not name.startswith('/') and '..' not in Path(name).parts for name in names)
+              source.extractall(staging)
+          for item in list(root.iterdir()):
+              if item.name in {'.git', '.import-staging'}:
+                  continue
+              shutil.rmtree(item) if item.is_dir() else item.unlink()
+          for item in list(staging.iterdir()):
+              shutil.move(str(item), str(root / item.name))
+          staging.rmdir()
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Restore complete public source tree"
+            git push
+          fi
