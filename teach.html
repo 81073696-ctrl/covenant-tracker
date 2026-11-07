@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>教它认界面 · 卫戍协议记牌器</title>
+<link rel="stylesheet" href="/static/style.css">
+<style>
+  .teach-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 16px; padding: 16px; height: calc(100vh - 56px); }
+  .stage { position: relative; background: #07080a; border: 1px solid var(--line, #262b33); border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .stage img { max-width: 100%; max-height: 100%; display: block; }
+  #overlay { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); cursor: crosshair; }
+  #overlay.idle { cursor: default; }
+  .side { overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+  .side section { background: var(--panel, #15181d); border: 1px solid var(--line, #262b33); border-radius: 10px; padding: 12px; }
+  .side h3 { margin: 0 0 8px; font-size: 13px; color: var(--muted, #8b929e); font-weight: 600; letter-spacing: .04em; }
+  .row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .row > * { min-width: 0; }
+  input, select, button { font: inherit; }
+  input[type=text], input[type=number], select { background: #0d0f12; border: 1px solid #2b313b; color: #e6e8ec; border-radius: 6px; padding: 6px 8px; width: 100%; }
+  button { background: #232833; border: 1px solid #333a46; color: #e6e8ec; border-radius: 6px; padding: 6px 10px; cursor: pointer; white-space: nowrap; }
+  button:hover { background: #2b3140; }
+  button.primary { background: var(--accent, #f6a329); border-color: var(--accent, #f6a329); color: #1a1206; font-weight: 600; }
+  .regions { display: flex; flex-direction: column; gap: 6px; max-height: 260px; overflow-y: auto; }
+  .reg { display: grid; grid-template-columns: 1fr 74px 58px 26px; gap: 6px; align-items: center; font-size: 12px; }
+  .reg input, .reg select { padding: 3px 5px; font-size: 12px; }
+  .reg .del { padding: 2px 4px; color: #e06c75; }
+  .hint { color: var(--muted, #8b929e); font-size: 12px; line-height: 1.6; }
+  .toast { position: fixed; right: 18px; bottom: 18px; background: #232833; border: 1px solid #3a4150; padding: 10px 14px; border-radius: 8px; font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+  .modal { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; }
+  .modal.show { display: flex; }
+  .modal .box { background: var(--panel, #15181d); border: 1px solid #2b313b; border-radius: 10px; padding: 16px; width: 320px; }
+</style>
+</head>
+<body>
+<header class="topbar" style="display:flex;align-items:center;gap:12px;padding:0 16px;height:56px;border-bottom:1px solid #262b33;">
+  <strong style="color:#f6a329;">教会它认界面</strong>
+  <span class="hint">拖框标区域 · 点一下学数字 · 选格子学干员</span>
+  <span style="flex:1"></span>
+  <a href="/" style="color:#8b929e;font-size:13px;">← 回到面板</a>
+</header>
+
+<div class="teach-wrap">
+  <div class="stage" id="stage">
+    <img id="shot" alt="等待截图">
+    <canvas id="overlay"></canvas>
+  </div>
+
+  <aside class="side">
+    <section>
+      <h3>1. 接窗口</h3>
+      <div class="row">
+        <input id="win" type="text" placeholder="窗口标题包含…（如 Arknights）">
+        <button id="btn-connect" class="primary">连接</button>
+      </div>
+      <div class="row">
+        <select id="win-list"><option value="">— 已打开的窗口 —</option></select>
+        <button id="btn-shot">截图</button>
+      </div>
+      <div class="hint" id="frame-hint">还没有截图。</div>
+    </section>
+
+    <section>
+      <h3>2. 区域（拖框新建）</h3>
+      <div class="regions" id="regions"></div>
+      <div class="row" style="margin-top:8px;">
+        <button id="btn-save" class="primary">保存布局</button>
+        <button id="btn-reset">重置为默认</button>
+      </div>
+      <div class="hint">kind：digits=数字格；shop=商店整排；units=整备/战场整排。</div>
+    </section>
+
+    <section>
+      <h3>3. 学数字</h3>
+      <div class="row">
+        <select id="digit-region"></select>
+        <input id="digit-text" type="text" placeholder="图上是几" style="width:90px;">
+        <button id="btn-learn-digit">学</button>
+      </div>
+      <div class="hint">先把资金/等级/回合框成 digits，再各学一次 0–9 里出现过的字形。</div>
+    </section>
+
+    <section>
+      <h3>4. 学干员格子</h3>
+      <div class="row">
+        <select id="slot-region"></select>
+        <input id="slot-index" type="number" min="0" value="0" style="width:64px;">
+      </div>
+      <div class="row">
+        <select id="op-select"></select>
+        <button id="btn-learn-slot">学这一格</button>
+      </div>
+      <div class="hint">选「商店/整备区」区域和格子序号；每个干员学一张，之后整排都能认。</div>
+    </section>
+
+    <section>
+      <h3>5. 学结算画面</h3>
+      <div class="row">
+        <select id="result-region"></select>
+        <select id="result-kind">
+          <option value="clear">通关</option>
+          <option value="fail">失败</option>
+        </select>
+        <button id="btn-learn-result">学这张结算图</button>
+      </div>
+      <div class="hint">把结算界面上「通关 / 失败」最醒目的那块框成 kind=result，两种各截一张教会它；以后识别到会自动弹提示。</div>
+    </section>
+
+    <section>
+      <h3>6. 试识别</h3>
+      <div class="row"><button id="btn-read" class="primary">识别这一帧</button></div>
+      <pre id="read-out" class="hint" style="white-space:pre-wrap;max-height:180px;overflow:auto;"></pre>
+    </section>
+  </aside>
+</div>
+
+<div class="modal" id="modal">
+  <div class="box">
+    <h3 style="margin:0 0 10px;font-size:14px;">新区域</h3>
+    <div class="row"><input id="m-name" type="text" placeholder="名字，如 gold / shop"></div>
+    <div class="row">
+      <select id="m-kind">
+        <option value="digits">digits（数字）</option>
+        <option value="shop">shop（商店整排）</option>
+        <option value="units">units（整备/战场整排）</option>
+      </select>
+      <input id="m-slots" type="number" min="1" max="12" value="5" title="格子数">
+    </div>
+    <div class="row" style="justify-content:flex-end;">
+      <button id="m-cancel">取消</button>
+      <button id="m-ok" class="primary">加上</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="/static/teach.js"></script>
+</body>
+</html>

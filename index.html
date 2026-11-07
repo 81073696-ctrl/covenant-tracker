@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>卫戍协议 · 记牌器</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23090c0f'/%3E%3Cpath d='M32 7 57 32 32 57 7 32Z' fill='none' stroke='%23e9b85f' stroke-width='4'/%3E%3Cpath d='m32 20 12 12-12 12-12-12Z' fill='%236bd5ca'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/hdt.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo">◈</span>
+    <span class="title">卫戍协议 · 记牌器</span>
+    <span class="brand-sub">TACTICAL CONSOLE</span>
+    <span class="ver" id="ver">v1.0</span>
+  </div>
+  <nav class="tabs">
+    <button class="tab on" data-view="match">对局</button>
+    <button class="tab" data-view="stats">统计</button>
+  </nav>
+  <div class="head-mid">
+    <label class="mode-label">模式
+      <select id="mode"></select>
+    </label>
+    <span class="pack-info" id="pack-info"></span>
+  </div>
+  <div class="head-right">
+    <span class="dot" id="conn-dot"></span>
+    <span id="conn-text">连接中…</span>
+    <button class="ghost desktop-only hidden" id="btn-compact" type="button" aria-pressed="false">紧凑模式</button>
+    <button class="ghost desktop-only hidden" id="btn-topmost" type="button" aria-pressed="false">置顶</button>
+    <button class="ghost" id="btn-new">新局</button>
+    <button class="ghost" id="btn-auto" title="定时抓帧并自动更新面板">自动识别</button>
+    <button class="ghost" id="btn-edit">编辑商店</button>
+    <button class="ghost" id="btn-settings" title="设置">⚙ 设置</button>
+    <a class="ghost" href="/teach" target="_blank">教它认界面</a>
+    <a class="ghost" href="/lens" target="_blank" title="看每一帧为什么没认出来">识别工作台</a>
+  </div>
+</header>
+
+<div class="ledger-warn hidden" id="ledger-warn">
+  <b>事件账本异常，动作已暂停</b>
+  <span id="ledger-warn-text"></span>
+</div>
+
+<main id="match-main">
+  <div class="result-hint hidden" id="result-hint">
+    <span id="result-hint-text">识别到结算画面</span>
+    <button class="primary" id="result-record">记录本局</button>
+    <button class="ghost" id="result-dismiss">忽略</button>
+  </div>
+  <!-- 左：对局 -->
+  <section class="panel board-panel">
+    <div class="hud">
+      <div class="stat" data-edit="round_no"><label>回合</label><b id="round">1</b><small id="rounds-max"></small></div>
+      <div class="stat gold" data-edit="gold"><label>资金</label><b id="gold">4</b></div>
+      <div class="stat" data-edit="shop_level"><label>调度中心</label><b id="level">1</b></div>
+      <div class="stat" data-edit="hp"><label>生命</label><b id="hp">—</b></div>
+      <div class="stat phase"><label>阶段</label><b id="phase">休整</b></div>
+    </div>
+
+    <div class="follow-bar" id="follow-bar" role="status" aria-live="polite">
+      <strong id="follow-status">未连接</strong>
+      <span id="follow-detail">连接游戏窗口后自动同步，无需重复点击操作</span>
+    </div>
+    <div class="follow-pending hidden" id="follow-pending"></div>
+
+    <details class="manual-actions" id="manual-actions">
+      <summary>手动纠错 <span class="hint">仅在识别不准或暂停时使用</span></summary>
+      <label class="mini">刷新类型
+        <select id="refresh-type">
+          <option value="normal">普通刷新</option>
+          <option value="special">特殊刷新（仍付费）</option>
+          <option value="free">免费刷新（人工确认）</option>
+        </select>
+      </label>
+      <div class="actions">
+        <button id="btn-refresh">刷新 <span class="cost" id="cost-refresh">-1</span></button>
+        <button id="btn-levelup">升级 <span class="cost" id="cost-level">-1</span></button>
+        <button id="btn-next" class="primary">过回合 <span class="gain" id="gain-next">+4</span></button>
+      </div>
+    </details>
+    <div class="actions">
+      <button id="btn-freeze" class="toggle">锁定</button>
+      <button id="btn-add" class="ghost">＋ 摆一张</button>
+    </div>
+
+    <div class="section-title">
+      <h3>调度中心</h3>
+      <span class="hint" id="shop-hint"></span>
+      <button class="primary shop-confirm" id="btn-confirm-shop">确认商店并计入本次刷新</button>
+    </div>
+    <div class="shop" id="shop"></div>
+
+    <div class="section-title">
+      <h3>整备区</h3><span class="hint" id="bench-count"></span>
+    </div>
+    <div class="units" id="bench"></div>
+
+    <div class="section-title">
+      <h3>战场</h3><span class="hint" id="board-count"></span>
+    </div>
+    <div class="units" id="board"></div>
+
+    <div class="footnote" id="rules-note"></div>
+  </section>
+
+  <!-- 右侧情报栏：折叠只影响显示，不影响快照更新 -->
+  <aside class="intel-panel" aria-label="对局情报">
+    <section class="panel intel-module odds-panel">
+      <details open>
+        <summary class="section-title">
+          <h3>商店概率</h3>
+          <span class="hint" id="odds-meta"></span>
+        </summary>
+        <div class="tier-bars" id="tiers"></div>
+        <div class="search-row">
+          <input id="search" type="search" placeholder="搜索干员 / 盟约…" autocomplete="off">
+          <label class="mini"><input type="checkbox" id="only-owned"> 只看已拥有</label>
+          <button class="ghost" id="btn-odds-detail" type="button" aria-pressed="false">详细数据</button>
+        </div>
+        <div class="table-wrap">
+          <table class="odds-table">
+            <thead><tr><th>干员</th><th>阶</th><th class="num">剩余</th><th class="num odds-detail">单格估计</th><th class="num">本刷估计</th><th class="num odds-detail">实测命中</th><th class="num odds-detail">命中成本</th></tr></thead>
+            <tbody id="odds"></tbody>
+          </table>
+        </div>
+        <div class="footnote" id="odds-note"></div>
+        <details class="refresh-details">
+          <summary class="section-title subsection-title"><h3>本局刷新</h3><span class="hint">实测含人工确认与稳定自动同步</span></summary>
+          <div id="refresh-note" class="footnote"></div>
+          <div class="table-wrap short"><table class="odds-table"><tbody id="refresh-history"></tbody></table></div>
+        </details>
+      </details>
+    </section>
+
+    <section class="panel intel-module">
+      <details open>
+        <summary class="section-title">
+          <h3>盟约</h3><span class="hint" id="bond-meta"></span>
+        </summary>
+        <div class="bonds" id="bonds"></div>
+      </details>
+    </section>
+
+    <section class="panel intel-module">
+      <details open>
+        <summary class="section-title">
+          <h3>经济</h3><span class="hint" id="eco-meta"></span>
+        </summary>
+        <div class="economy" id="economy"></div>
+      </details>
+    </section>
+
+    <section class="panel intel-module">
+      <details open>
+        <summary class="section-title">
+          <h3>日志</h3><span class="hint">最近 40 条</span>
+        </summary>
+        <div class="log" id="log"></div>
+      </details>
+    </section>
+  </aside>
+</main>
+
+<!-- 统计视图 -->
+<main id="stats-main" class="hidden stats-main">
+  <section class="panel span-2">
+    <div class="section-title"><h3>概览</h3><span class="hint" id="st-range"></span></div>
+    <div class="kpis" id="st-kpis"></div>
+    <div class="stats-toolbar">
+      <label class="mini">模式 <select id="st-mode"></select></label>
+      <label class="mini">策略 <select id="st-band"></select></label>
+      <label class="mini">赛季 <select id="st-patch"></select></label>
+      <label class="mini">最小样本 <input id="st-min" type="number" min="1" max="99" value="5"></label>
+      <button class="ghost" id="st-refresh">刷新</button>
+      <span class="grow"></span>
+      <button class="primary" id="st-record">记录本局</button>
+      <button class="ghost" id="st-import">导入</button>
+      <button class="ghost" id="st-upload">上传到社区</button>
+      <button class="ghost" id="st-export">导出 CSV</button>
+    </div>
+    <div class="footnote" id="st-notes"></div>
+  </section>
+
+  <section class="panel">
+    <div class="section-title"><h3>干员</h3><span class="hint">按出场率排序 · 通关率灰色为样本不足</span></div>
+    <div class="table-wrap stats-wrap">
+      <table class="odds-table stats-table">
+        <thead><tr><th>干员</th><th>阶</th><th class="num">出场</th><th class="num">出场率</th><th class="num">通关率</th><th class="num">Δ</th><th class="num">95% 区间</th></tr></thead>
+        <tbody id="st-ops"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="section-title"><h3>盟约</h3><span class="hint">终局激活</span></div>
+    <div class="table-wrap stats-wrap">
+      <table class="odds-table stats-table">
+        <thead><tr><th>盟约</th><th class="num">出场</th><th class="num">通关率</th></tr></thead>
+        <tbody id="st-bonds"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="section-title"><h3>阵容</h3><span class="hint">终局盟约组合</span></div>
+    <div class="table-wrap stats-wrap">
+      <table class="odds-table stats-table">
+        <thead><tr><th>组合</th><th class="num">场次</th><th class="num">通关率</th></tr></thead>
+        <tbody id="st-comps"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="section-title"><h3>策略</h3><span class="hint">开局分队</span></div>
+    <div class="table-wrap stats-wrap short">
+      <table class="odds-table stats-table">
+        <thead><tr><th>策略</th><th class="num">场次</th><th class="num">通关率</th></tr></thead>
+        <tbody id="st-bands"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel span-2">
+    <div class="section-title"><h3>按回合</h3><span class="hint">只统计打到该回合的对局</span></div>
+    <div class="rounds-grid">
+      <div class="table-wrap stats-wrap short">
+        <table class="odds-table stats-table">
+          <thead><tr><th>回合</th><th class="num">样本</th><th class="num">平均等级</th><th class="num">平均资金</th><th class="num">平均上场</th></tr></thead>
+          <tbody id="st-rounds"></tbody>
+        </table>
+      </div>
+      <div>
+        <div class="round-pick">
+          <span class="hint">看哪一回合</span>
+          <select id="st-round"></select>
+        </div>
+        <div class="table-wrap stats-wrap short">
+          <table class="odds-table stats-table">
+            <thead><tr><th>干员</th><th class="num">阶</th><th class="num">在场</th><th class="num">在场率</th></tr></thead>
+            <tbody id="st-round-ops"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 记录本局 -->
+<div class="modal hidden" id="record">
+  <div class="modal-box narrow">
+    <div class="modal-head"><span>记录本局</span><button class="ghost" id="rec-close">关闭</button></div>
+    <label class="field">结果
+      <select id="rec-result">
+        <option value="clear">通关</option>
+        <option value="fail" selected>失败</option>
+        <option value="quit">放弃 / 中途退出</option>
+      </select>
+    </label>
+    <label class="field">杯数 / 积分（可选，结算界面有就填） <input id="rec-cups" type="number" min="0" max="999"></label>
+    <label class="field">备注（可选） <input id="rec-note" type="text" maxlength="120" placeholder="例如：被漏怪翻盘 / 6 费局"></label>
+    <p class="tip" id="rec-preview"></p>
+    <button class="primary wide" id="rec-save">保存这局</button>
+  </div>
+</div>
+
+<!-- 导入战绩 -->
+<div class="modal hidden" id="importer">
+  <div class="modal-box">
+    <div class="modal-head"><span>导入战绩（JSONL）</span><button class="ghost" id="imp-close">关闭</button></div>
+    <p class="tip">可以用「导出」得到的文件，也可以合并别人发来的文件；按记录 id 去重，不会重复计数。</p>
+    <input type="file" id="imp-file" accept=".jsonl,.json,.txt">
+    <textarea id="imp-text" rows="9" placeholder="每行一条 JSON 记录…"></textarea>
+    <button class="primary wide" id="imp-go">导入</button>
+  </div>
+</div>
+
+<!-- 设置 -->
+<div class="modal hidden" id="settings">
+  <div class="modal-box">
+    <div class="modal-head"><span>设置</span><button class="ghost" id="set-close">关闭</button></div>
+    <p class="tip" id="set-meta">正在读取…</p>
+    <label class="field">自动识别间隔（秒） <input id="set-interval" type="number" min="0.5" max="30" step="0.5"></label>
+    <label class="field checkbox"><input id="set-auto" type="checkbox"> 打开面板时自动开始识别（需要先接采集源）</label>
+    <p class="tip">采集源：<span id="set-source">未连接</span> · <a href="/teach">去教学页连接窗口 / 学界面</a></p>
+    <button class="primary wide" id="set-save">保存</button>
+  </div>
+</div>
+
+<!-- 上传到社区 -->
+<div class="modal hidden" id="uploader">
+  <div class="modal-box">
+    <div class="modal-head"><span>上传本机战绩</span><button class="ghost" id="up-close">关闭</button></div>
+    <p class="tip">只上传对局摘要（干员/盟约/回合/结果/杯数），不含截图、账号或设备信息；按记录 id 去重，可重复上传。</p>
+    <label class="field">社区地址 <input id="up-url" type="text" placeholder="http://127.0.0.1:8900"></label>
+    <label class="field">令牌（可选，服务端设了才需要） <input id="up-token" type="password" autocomplete="off"></label>
+    <p class="tip" id="up-preview">正在读取本机记录…</p>
+    <button class="primary wide" id="up-go">上传</button>
+  </div>
+</div>
+
+<!-- 选人弹窗 -->
+<div class="modal hidden" id="picker">
+  <div class="modal-box">
+    <div class="modal-head">
+      <span id="picker-title">选择干员</span>
+      <button class="ghost" id="picker-close">关闭</button>
+    </div>
+    <input id="picker-search" type="search" placeholder="输入名字…" autocomplete="off">
+    <div class="picker-list" id="picker-list"></div>
+  </div>
+</div>
+
+<!-- 新局弹窗 -->
+<div class="modal hidden" id="newgame">
+  <div class="modal-box narrow">
+    <div class="modal-head"><span>开新局</span><button class="ghost" id="ng-close">关闭</button></div>
+    <label class="field">模式 <select id="ng-mode"></select></label>
+    <label class="field">策略（决定初始生命） <select id="ng-band"></select></label>
+    <label class="field hidden" id="ng-group-field">核心盟约组（本局二选一） <select id="ng-group"></select></label>
+    <label class="field">初始生命 <input id="ng-hp" type="number" min="1" max="99"></label>
+    <p class="tip">策略与生命都可以留空，之后再手填；不会影响卡池计算。</p>
+    <button class="primary wide" id="ng-start">开始</button>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<div id="menu" class="menu hidden"></div>
+
+<script src="/static/desktop.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

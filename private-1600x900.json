@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "source": "private-1600x900",
+  "regions": {
+    "gold": {
+      "rect": [
+        0.945,
+        0.8356,
+        0.0106,
+        0.0333
+      ],
+      "kind": "digits"
+    },
+    "level": {
+      "rect": [
+        0.53,
+        0.8344,
+        0.0131,
+        0.0556
+      ],
+      "kind": "digits",
+      "params": {
+        "levels": [
+          1
+        ]
+      }
+    },
+    "level_l2": {
+      "rect": [
+        0.4413,
+        0.8344,
+        0.0194,
+        0.0556
+      ],
+      "kind": "digits",
+      "target": "level",
+      "params": {
+        "invert": true,
+        "levels": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "round": {
+      "rect": [
+        0.3931,
+        0.0356,
+        0.0281,
+        0.0411
+      ],
+      "kind": "digits"
+    },
+    "hp": {
+      "rect": [
+        0.5794,
+        0.0411,
+        0.0213,
+        0.0311
+      ],
+      "kind": "digits"
+    },
+    "shop": {
+      "rect": [
+        0.5725,
+        0.7633,
+        0.3425,
+        0.2078
+      ],
+      "kind": "shop",
+      "params": {
+        "slots": 4,
+        "art": 0.66,
+        "levels": [
+          1
+        ],
+        "chars": 3
+      }
+    },
+    "shop_l2": {
+      "rect": [
+        0.4875,
+        0.7633,
+        0.4275,
+        0.2078
+      ],
+      "kind": "shop",
+      "params": {
+        "slots": 5,
+        "art": 0.66,
+        "levels": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "chars": 4
+      }
+    }
+  }
+}

@@ -1,0 +1,272 @@
+/* HDT 风格视觉层：钢灰 + 古金 + 细浮雕边框。
+   只做覆盖，不改结构；加载在 style.css 之后。
+   目标：更接近「桌面记牌器」的密度与质感，而不是网页仪表盘。 */
+
+:root {
+  --bg: #0a0e13;
+  --panel: #10161e;
+  --panel-2: #151d27;
+  --line: #232f3c;
+  --line-strong: #3b4c5e;
+  --text: #e8e3d7;
+  --dim: #93a0ad;
+  --muted: #7f8b98;
+  --accent: #d9b45f;
+  --accent-2: #7fb6d4;
+  --danger: #e0685f;
+  --ok: #78c79a;
+  --gold-line: linear-gradient(180deg, #e6c878, #a8842f 55%, #6f5518);
+  --steel: linear-gradient(180deg, #1b2530, #121a23 40%, #0e151c);
+  --serif: "Georgia", "Cambria", "STZhongsong", "SimSun", serif;
+}
+
+/* 背景：金属拉丝 + 极轻噪点，避免大片死黑 */
+body, html {
+  background:
+    radial-gradient(1200px 520px at 50% -220px, rgba(217, 180, 95, .07), transparent 70%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .014) 0 1px, transparent 1px 3px),
+    linear-gradient(180deg, #0b1016, #090d12 60%, #070a0e);
+}
+
+/* 顶栏：钢条 + 金色压边 */
+header {
+  padding: 8px 16px;
+  border-bottom: 1px solid #0a0d11;
+  background: linear-gradient(180deg, #1c2632, #131b24 55%, #0d141b);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .06),
+    0 2px 0 rgba(217, 180, 95, .22),
+    0 10px 24px rgba(0, 0, 0, .45);
+}
+
+.brand { gap: 10px; align-items: center; }
+.logo {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #8a6f2c;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 235, 180, .35), transparent 55%),
+    linear-gradient(145deg, #2a3746, #141c25);
+  box-shadow: inset 0 0 0 1px rgba(217, 180, 95, .25), 0 0 10px rgba(217, 180, 95, .18);
+  color: var(--accent);
+}
+.title {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: .14em;
+  color: #f0e6cf;
+  text-shadow: 0 1px 0 #000, 0 0 14px rgba(217, 180, 95, .12);
+}
+.brand-sub { letter-spacing: 2.4px; color: #7c8794; }
+.ver { color: #8d7a4c; }
+
+/* 页签：像 HDT 的侧栏分段，金色下划线 */
+.tabs { gap: 2px; background: rgba(0, 0, 0, .25); border: 1px solid #22303d; padding: 2px; border-radius: 4px; }
+.tab {
+  border: 0;
+  background: transparent;
+  color: #9aa7b3;
+  padding: 6px 16px;
+  border-radius: 3px;
+  letter-spacing: .12em;
+  font-size: 12px;
+}
+.tab:hover { color: #e8e3d7; background: rgba(255, 255, 255, .04); }
+.tab.on {
+  color: #f3e6c4;
+  background: linear-gradient(180deg, rgba(217, 180, 95, .16), rgba(217, 180, 95, .05));
+  box-shadow: inset 0 -2px 0 var(--accent), inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+
+/* 按钮：钢质小块，主按钮走金 */
+button.ghost, a.ghost, button.primary {
+  border-radius: 3px;
+  border: 1px solid #2b3947;
+  background: linear-gradient(180deg, #1a232e, #121a23);
+  color: #cfd6dc;
+  padding: 5px 11px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+  transition: border-color .12s, color .12s, background .12s;
+}
+button.ghost:hover, a.ghost:hover {
+  border-color: #6d5a2c;
+  color: #f0e4c8;
+  background: linear-gradient(180deg, #222c38, #161f29);
+}
+button.primary {
+  border-color: #8a6f2c;
+  color: #1b1408;
+  background: linear-gradient(180deg, #efd08a, #d9b45f 45%, #b08a35);
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .35);
+}
+button.primary:hover { filter: brightness(1.06); }
+
+/* 面板：一层外框 + 一道内高光，像插件的卡片框 */
+.panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .028), transparent 70px),
+    var(--panel);
+  border: 1px solid #23303d;
+  border-radius: 5px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .05),
+    inset 0 0 0 1px rgba(0, 0, 0, .35),
+    0 8px 22px rgba(0, 0, 0, .35);
+}
+.panel > .section-title, .panel > h3 { border-bottom: 1px solid #1d2833; }
+
+.section-title h3, .panel h3 {
+  font-family: var(--serif);
+  letter-spacing: .16em;
+  font-size: 13px;
+  color: #e7d9b6;
+  font-weight: 700;
+}
+.hint, .section-title .hint { color: #7f8b98; }
+
+/* HUD：五个小仪表面板 */
+.hud { gap: 8px; }
+.stat {
+  background: linear-gradient(180deg, #161f29, #0f161e);
+  border: 1px solid #22303d;
+  border-radius: 4px;
+  padding: 8px 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+.stat label { font-size: 10px; letter-spacing: .18em; color: #8b97a3; }
+.stat b { font-size: 24px; font-variant-numeric: tabular-nums; color: #f2ead6; }
+.stat.gold b { color: #f0cf86; text-shadow: 0 0 12px rgba(217, 180, 95, .25); }
+.stat::after { background: linear-gradient(90deg, transparent, rgba(217, 180, 95, .55), transparent); }
+
+/* 表格：密度提到 HDT 级别 */
+table { border-collapse: collapse; }
+thead th {
+  font-size: 10px;
+  letter-spacing: .14em;
+  color: #8b97a3;
+  text-transform: uppercase;
+  border-bottom: 1px solid #263340;
+  padding: 6px 8px;
+}
+tbody td { padding: 5px 8px; border-bottom: 1px solid rgba(35, 48, 61, .55); }
+tbody tr:nth-child(even) { background: rgba(255, 255, 255, .018); }
+tbody tr:hover { background: rgba(217, 180, 95, .07); }
+tbody tr:hover td { color: #f3e8cd; }
+
+/* 商店卡：暗金双框 */
+.card {
+  border-radius: 5px;
+  border: 1px solid #2a3949;
+  background: linear-gradient(180deg, #18222d, #101820);
+  box-shadow:
+    inset 0 0 0 1px rgba(217, 180, 95, .10),
+    inset 0 1px 0 rgba(255, 255, 255, .06),
+    0 4px 12px rgba(0, 0, 0, .35);
+}
+.card:hover { border-color: #8a6f2c; box-shadow: inset 0 0 0 1px rgba(217, 180, 95, .35), 0 6px 16px rgba(0, 0, 0, .45); }
+.card.unknown { border-style: dashed; border-color: #33424f; }
+.card .name { color: #efe4cb; }
+
+/* 干员/单位小块 */
+.unit {
+  border-radius: 3px;
+  border: 1px solid #2a3949;
+  background: linear-gradient(180deg, #1a2531, #111923);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+.unit.golden, .unit[data-star="3"] { border-color: #b08a35; box-shadow: inset 0 0 0 1px rgba(217, 180, 95, .35); }
+
+/* 盟约行 */
+.bond { border-bottom: 1px solid rgba(35, 48, 61, .6); }
+.bond.on, .bond.active { color: #f0e2c0; background: linear-gradient(90deg, rgba(217, 180, 95, .12), transparent 70%); }
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0b1016; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #33414f, #222d39);
+  border: 1px solid #0b1016;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #4a5a68, #2b3745); }
+
+/* 连接状态点：做成宝石 */
+.dot { width: 8px; height: 8px; border-radius: 2px; transform: rotate(45deg); box-shadow: 0 0 8px currentColor; }
+
+/* 紧凑模式（桌面壳里切换） */
+body.compact header { padding: 6px 10px; gap: 6px; }
+body.compact .brand-sub, body.compact .pack-info, body.compact #conn-text { display: none; }
+body.compact .stat b { font-size: 19px; }
+body.compact .stat { padding: 6px 8px; }
+body.compact main#match-main { grid-template-columns: 1fr; }
+body.compact .panel { border-radius: 4px; }
+body.compact .tabs { display: none; }
+
+@media (max-width: 900px) {
+  .brand-sub, .pack-info { display: none; }
+  .title { font-size: 13px; letter-spacing: .1em; }
+}
+
+/* --- 弹窗 / 提示条 / 表单：和钢金主题对齐 --- */
+.modal {
+  background: linear-gradient(180deg, #18212b, #101821);
+  border: 1px solid #43535f;
+  border-radius: 6px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .07),
+    0 24px 60px rgba(0, 0, 0, .6);
+}
+.modal h3 { font-family: var(--serif); letter-spacing: .14em; color: #ecdcb6; }
+.toast {
+  background: linear-gradient(180deg, #1d2833, #131c25);
+  border: 1px solid #6d5a2c;
+  color: #f0e4c8;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+}
+.toast.bad { border-color: #8a3b35; color: #ffd9d3; }
+
+.ledger-warn {
+  background: linear-gradient(180deg, rgba(140, 45, 40, .55), rgba(70, 22, 20, .65));
+  border: 1px solid #8a3b35;
+  color: #ffd9d3;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+
+input, select, textarea {
+  background: #0d141b;
+  border: 1px solid #2b3947;
+  border-radius: 3px;
+  color: #e8e3d7;
+  padding: 5px 8px;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #8a6f2c;
+  box-shadow: 0 0 0 2px rgba(217, 180, 95, .15);
+}
+
+.kpi {
+  background: linear-gradient(180deg, #161f29, #0e151c);
+  border: 1px solid #22303d;
+  border-radius: 4px;
+}
+.kpi b { color: #f2ead6; font-variant-numeric: tabular-nums; }
+
+/* 统计页表格同样是钢金风 */
+.stats-table thead th {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #8b97a3;
+  border-bottom: 1px solid #263340;
+}
+.stats-table tbody tr:nth-child(even) { background: rgba(255, 255, 255, .018); }
+.stats-table tbody tr:hover { background: rgba(217, 180, 95, .07); }
+
+/* 结算提示条：金边，不刺眼 */
+.result-hint {
+  background: linear-gradient(180deg, rgba(217, 180, 95, .14), rgba(217, 180, 95, .05));
+  border: 1px solid #6d5a2c;
+  color: #f0e4c8;
+  border-radius: 4px;
+}
