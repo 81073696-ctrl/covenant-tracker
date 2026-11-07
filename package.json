@@ -1,0 +1,9 @@
+{
+  "name": "covenant-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "卫戍协议记牌器本地预览入口",
+  "scripts": {
+    "dev": "python -m covenant serve --no-browser --no-tray"
+  }
+}
