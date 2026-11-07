@@ -1,0 +1,772 @@
+{
+ "schema": 1,
+ "id": "act2autochess-2026-03",
+ "name": "卫戍协议：盟约",
+ "season": "act2autochess（2026-03 赛季）",
+ "updated": "2026-03-14",
+ "rules_version": "2026-lower-half-community-audit-1",
+ "source_type": "community_mixed",
+ "limitations": [
+  "混合官方玩法介绍、玩家 Wiki 与非官方复刻资料，逐项以 confidence 为准",
+  "装备、机变、免费招募和隐秘核心尚未纳入计算",
+  "多人共享卡池与联防尚未建模"
+ ],
+ "default_mode": "mode_single_funny",
+ "source": [
+  {
+   "name": "Stronghold-Protocol（同人复刻 + 数据逆向）",
+   "url": "https://github.com/sganggs/Stronghold-Protocol",
+   "license": "GPL-3.0",
+   "note": "act2autochess 活动表的结构化整理；数值以客户端数据表为准"
+  },
+  {
+   "name": "官方公告《卫戍协议：盟约》",
+   "url": "https://ak.hypergryph.com/news/5114",
+   "license": "© 鹰角网络",
+   "note": "玩法介绍与官方截图"
+  },
+  {
+   "name": "PRTS / NGA / B站社区实测",
+   "url": "https://prts.wiki/",
+   "license": "CC BY-NC-SA",
+   "note": "卡池份数、收入曲线等未在客户端明示的数值"
+  }
+ ],
+ "confidence": {
+  "modes": "data",
+  "shop.rules": "data",
+  "operators": "data",
+  "bonds": "data",
+  "bands": "data",
+  "economy.refresh_cost": "data",
+  "economy.upgrade_price": "data",
+  "economy.board_max": "data",
+  "economy.income": "community",
+  "pool.copies_by_tier": "community",
+  "economy.gold_carry_over": "community",
+  "shop.odds_model": "assumed"
+ },
+ "economy": {
+  "refresh_cost": 1,
+  "sell_price": 1,
+  "income_base": 3,
+  "income_cap": 12,
+  "income_per_round_bonus": 0,
+  "upgrade_decay_per_round": 1,
+  "board_max": 8,
+  "bench_max": 10,
+  "temp_max": 5,
+  "max_shop_level": 6,
+  "gold_carry_over": false,
+  "price_by_tier": {
+   "1": 2,
+   "2": 3,
+   "3": 3,
+   "4": 3,
+   "5": 4,
+   "6": 4
+  }
+ },
+ "pool": {
+  "copies_by_tier": {
+   "1": 12,
+   "2": 14,
+   "3": 18,
+   "4": 16,
+   "5": 8,
+   "6": 5
+  },
+  "golden_copies": 3
+ },
+ "modes": [
+  {
+   "id": "mode_training_1",
+   "name": "入门协议",
+   "code": "AC-TR-1",
+   "mode_type": "LOCAL",
+   "difficulty": "TRAINING",
+   "rounds": 4,
+   "shop_levels": [
+    {
+     "level": 1,
+     "upgrade_price": 4,
+     "char_slots": 3,
+     "item_slots": 0
+    },
+    {
+     "level": 2,
+     "upgrade_price": 4,
+     "char_slots": 3,
+     "item_slots": 0
+    },
+    {
+     "level": 3,
+     "upgrade_price": 6,
+     "char_slots": 3,
+     "item_slots": 0
+    },
+    {
+     "level": 4,
+     "upgrade_price": 9,
+     "char_slots": 3,
+     "item_slots": 0
+    },
+    {
+     "level": 5,
+     "upgrade_price": 12,
+     "char_slots": 3,
+     "item_slots": 1
+    },
+    {
+     "level": 6,
+     "upgrade_price": 99,
+     "char_slots": 3,
+     "item_slots": 1
+    }
+   ],
+   "active_bonds": [
+    "yanShip",
+    "sargonShip",
+    "victoriaShip",
+    "kjeragShip",
+    "lateranoShip",
+    "egirShip",
+    "siracusaShip",
+    "kazimierzShip",
+    "preciShip",
+    "swiftShip",
+    "skillfulShip",
+    "arcaneShip",
+    "steadShip",
+    "deputShip",
+    "visiShip",
+    "miraShip",
+    "investShip",
+    "raidShip",
+    "indomShip",
+    "maniShip",
+    "emptyShip",
+    "soloShip",
+    "suntShip"
+   ],
+   "inactive_bonds": []
+  },
+  {
+   "id": "mode_multi_abyss",
+   "name": "终极模拟",
+   "code": "AC-4",
+   "mode_type": "MULTI",
+   "difficulty": "ABYSS",
+   "rounds": 14,
+   "shop_levels": [
+    {
+     "level": 1,
+     "upgrade_price": 5,
+     "char_slots": 3,
+     "item_slots": 1
+    },
+    {
+     "level": 2,
+     "upgrade_price": 8,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 3,
+     "upgrade_price": 11,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 4,
+     "upgrade_price": 12,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 5,
+     "upgrade_price": 13,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 6,
+     "upgrade_price": 99,
+     "char_slots": 5,
+     "item_slots": 1
+    }
+   ],
+   "active_bonds": [
+    "yanShip",
+    "sargonShip",
+    "victoriaShip",
+    "kjeragShip",
+    "lateranoShip",
+    "egirShip",
+    "siracusaShip",
+    "kazimierzShip",
+    "preciShip",
+    "swiftShip",
+    "skillfulShip",
+    "arcaneShip",
+    "steadShip",
+    "deputShip",
+    "visiShip",
+    "miraShip",
+    "investShip",
+    "raidShip",
+    "indomShip",
+    "maniShip",
+    "emptyShip",
+    "soloShip",
+    "suntShip"
+   ],
+   "inactive_bonds": []
+  },
+  {
+   "id": "mode_multi_funny",
+   "name": "标准模拟",
+   "code": "AC-1",
+   "mode_type": "MULTI",
+   "difficulty": "FUNNY",
+   "rounds": 14,
+   "shop_levels": [
+    {
+     "level": 1,
+     "upgrade_price": 5,
+     "char_slots": 3,
+     "item_slots": 1
+    },
+    {
+     "level": 2,
+     "upgrade_price": 8,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 3,
+     "upgrade_price": 10,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 4,
+     "upgrade_price": 11,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 5,
+     "upgrade_price": 11,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 6,
+     "upgrade_price": 99,
+     "char_slots": 5,
+     "item_slots": 1
+    }
+   ],
+   "active_bonds": [
+    "yanShip",
+    "sargonShip",
+    "victoriaShip",
+    "kjeragShip",
+    "siracusaShip",
+    "preciShip",
+    "swiftShip",
+    "steadShip",
+    "deputShip",
+    "visiShip",
+    "indomShip",
+    "maniShip",
+    "emptyShip"
+   ],
+   "inactive_bonds": [
+    "lateranoShip",
+    "egirShip",
+    "kazimierzShip",
+    "skillfulShip",
+    "arcaneShip",
+    "miraShip",
+    "investShip",
+    "raidShip",
+    "soloShip",
+    "suntShip"
+   ]
+  },
+  {
+   "id": "mode_multi_hard",
+   "name": "绝境模拟",
+   "code": "AC-3",
+   "mode_type": "MULTI",
+   "difficulty": "HARD",
+   "rounds": 14,
+   "shop_levels": [
+    {
+     "level": 1,
+     "upgrade_price": 5,
+     "char_slots": 3,
+     "item_slots": 1
+    },
+    {
+     "level": 2,
+     "upgrade_price": 8,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 3,
+     "upgrade_price": 11,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 4,
+     "upgrade_price": 12,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 5,
+     "upgrade_price": 13,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 6,
+     "upgrade_price": 99,
+     "char_slots": 5,
+     "item_slots": 1
+    }
+   ],
+   "active_bonds": [
+    "yanShip",
+    "sargonShip",
+    "victoriaShip",
+    "kjeragShip",
+    "lateranoShip",
+    "egirShip",
+    "siracusaShip",
+    "kazimierzShip",
+    "preciShip",
+    "swiftShip",
+    "skillfulShip",
+    "arcaneShip",
+    "steadShip",
+    "deputShip",
+    "visiShip",
+    "miraShip",
+    "investShip",
+    "raidShip",
+    "indomShip",
+    "maniShip",
+    "emptyShip",
+    "soloShip",
+    "suntShip"
+   ],
+   "inactive_bonds": []
+  },
+  {
+   "id": "mode_multi_normal",
+   "name": "险境模拟",
+   "code": "AC-2",
+   "mode_type": "MULTI",
+   "difficulty": "NORMAL",
+   "rounds": 14,
+   "shop_levels": [
+    {
+     "level": 1,
+     "upgrade_price": 5,
+     "char_slots": 3,
+     "item_slots": 1
+    },
+    {
+     "level": 2,
+     "upgrade_price": 8,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 3,
+     "upgrade_price": 11,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 4,
+     "upgrade_price": 12,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 5,
+     "upgrade_price": 13,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 6,
+     "upgrade_price": 99,
+     "char_slots": 5,
+     "item_slots": 1
+    }
+   ],
+   "active_bonds": [
+    "yanShip",
+    "sargonShip",
+    "victoriaShip",
+    "kjeragShip",
+    "lateranoShip",
+    "egirShip",
+    "siracusaShip",
+    "kazimierzShip",
+    "preciShip",
+    "swiftShip",
+    "skillfulShip",
+    "arcaneShip",
+    "steadShip",
+    "deputShip",
+    "visiShip",
+    "miraShip",
+    "investShip",
+    "raidShip",
+    "indomShip",
+    "maniShip",
+    "emptyShip",
+    "soloShip",
+    "suntShip"
+   ],
+   "inactive_bonds": []
+  },
+  {
+   "id": "mode_single_abyss",
+   "name": "终极模拟",
+   "code": "AC-4",
+   "mode_type": "SINGLE",
+   "difficulty": "ABYSS",
+   "rounds": 14,
+   "shop_levels": [
+    {
+     "level": 1,
+     "upgrade_price": 5,
+     "char_slots": 3,
+     "item_slots": 1
+    },
+    {
+     "level": 2,
+     "upgrade_price": 8,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 3,
+     "upgrade_price": 11,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 4,
+     "upgrade_price": 12,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 5,
+     "upgrade_price": 13,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 6,
+     "upgrade_price": 99,
+     "char_slots": 5,
+     "item_slots": 1
+    }
+   ],
+   "active_bonds": [
+    "yanShip",
+    "sargonShip",
+    "victoriaShip",
+    "kjeragShip",
+    "lateranoShip",
+    "egirShip",
+    "siracusaShip",
+    "kazimierzShip",
+    "preciShip",
+    "swiftShip",
+    "skillfulShip",
+    "arcaneShip",
+    "steadShip",
+    "deputShip",
+    "visiShip",
+    "miraShip",
+    "investShip",
+    "raidShip",
+    "indomShip",
+    "maniShip",
+    "emptyShip",
+    "soloShip",
+    "suntShip"
+   ],
+   "inactive_bonds": []
+  },
+  {
+   "id": "mode_single_funny",
+   "name": "标准模拟",
+   "code": "AC-1",
+   "mode_type": "SINGLE",
+   "difficulty": "FUNNY",
+   "rounds": 9,
+   "shop_levels": [
+    {
+     "level": 1,
+     "upgrade_price": 1,
+     "char_slots": 3,
+     "item_slots": 1
+    },
+    {
+     "level": 2,
+     "upgrade_price": 1,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 3,
+     "upgrade_price": 5,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 4,
+     "upgrade_price": 8,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 5,
+     "upgrade_price": 10,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 6,
+     "upgrade_price": 99,
+     "char_slots": 5,
+     "item_slots": 1
+    }
+   ],
+   "active_bonds": [
+    "yanShip",
+    "sargonShip",
+    "victoriaShip",
+    "kjeragShip",
+    "siracusaShip",
+    "preciShip",
+    "swiftShip",
+    "steadShip",
+    "deputShip",
+    "visiShip",
+    "indomShip",
+    "maniShip",
+    "emptyShip"
+   ],
+   "inactive_bonds": [
+    "lateranoShip",
+    "egirShip",
+    "kazimierzShip",
+    "skillfulShip",
+    "arcaneShip",
+    "miraShip",
+    "investShip",
+    "raidShip",
+    "soloShip",
+    "suntShip"
+   ]
+  },
+  {
+   "id": "mode_single_hard",
+   "name": "绝境模拟",
+   "code": "AC-3",
+   "mode_type": "SINGLE",
+   "difficulty": "HARD",
+   "rounds": 14,
+   "shop_levels": [
+    {
+     "level": 1,
+     "upgrade_price": 5,
+     "char_slots": 3,
+     "item_slots": 1
+    },
+    {
+     "level": 2,
+     "upgrade_price": 8,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 3,
+     "upgrade_price": 11,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 4,
+     "upgrade_price": 12,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 5,
+     "upgrade_price": 13,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 6,
+     "upgrade_price": 99,
+     "char_slots": 5,
+     "item_slots": 1
+    }
+   ],
+   "active_bonds": [
+    "yanShip",
+    "sargonShip",
+    "victoriaShip",
+    "kjeragShip",
+    "lateranoShip",
+    "egirShip",
+    "siracusaShip",
+    "kazimierzShip",
+    "preciShip",
+    "swiftShip",
+    "skillfulShip",
+    "arcaneShip",
+    "steadShip",
+    "deputShip",
+    "visiShip",
+    "miraShip",
+    "investShip",
+    "raidShip",
+    "indomShip",
+    "maniShip",
+    "emptyShip",
+    "soloShip",
+    "suntShip"
+   ],
+   "inactive_bonds": []
+  },
+  {
+   "id": "mode_single_normal",
+   "name": "险境模拟",
+   "code": "AC-2",
+   "mode_type": "SINGLE",
+   "difficulty": "NORMAL",
+   "rounds": 14,
+   "shop_levels": [
+    {
+     "level": 1,
+     "upgrade_price": 5,
+     "char_slots": 3,
+     "item_slots": 1
+    },
+    {
+     "level": 2,
+     "upgrade_price": 8,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 3,
+     "upgrade_price": 11,
+     "char_slots": 4,
+     "item_slots": 1
+    },
+    {
+     "level": 4,
+     "upgrade_price": 12,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 5,
+     "upgrade_price": 13,
+     "char_slots": 5,
+     "item_slots": 1
+    },
+    {
+     "level": 6,
+     "upgrade_price": 99,
+     "char_slots": 5,
+     "item_slots": 1
+    }
+   ],
+   "active_bonds": [
+    "yanShip",
+    "sargonShip",
+    "victoriaShip",
+    "kjeragShip",
+    "lateranoShip",
+    "egirShip",
+    "siracusaShip",
+    "kazimierzShip",
+    "preciShip",
+    "swiftShip",
+    "skillfulShip",
+    "arcaneShip",
+    "steadShip",
+    "deputShip",
+    "visiShip",
+    "miraShip",
+    "investShip",
+    "raidShip",
+    "indomShip",
+    "maniShip",
+    "emptyShip",
+    "soloShip",
+    "suntShip"
+   ],
+   "inactive_bonds": []
+  }
+ ],
+ "_notes": [
+  "收入公式含推测成分：R1..R3 有证据，之后每回合 +1 与上限 12 属社区模型。",
+  "抽卡模型（各格独立、按剩余份数加权）为社区假设，允许同店重复；官方未公布。",
+  "资金默认在回合间清零；坎诺特等例外可通过 rules.gold_carry_over 覆盖。",
+  "11/8 新赛季上线后，请用新的 activity_table 数据重新生成本包。",
+  "；",
+  "商",
+  "店",
+  "表",
+  "与",
+  "回",
+  "合",
+  "数",
+  "按",
+  "同",
+  "人",
+  "私",
+  "服",
+  " ",
+  "d",
+  "a",
+  "t",
+  "a",
+  "/",
+  "c",
+  "o",
+  "n",
+  "f",
+  "i",
+  "g",
+  ".",
+  "j",
+  "s",
+  "o",
+  "n",
+  " ",
+  "校",
+  "正"
+ ]
+}

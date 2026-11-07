@@ -1,0 +1,247 @@
+{
+ "items": [
+  {
+   "id": "kazimierzShip",
+   "name": "卡西米尔",
+   "category": "CORE",
+   "activate_at": 3,
+   "in_deck": false,
+   "power": true,
+   "desc": "每次有干员部署时【卡西米尔】干员攻击力+20%（至多+(50+1×L)%）（受层数影响）\n【卡西米尔】干员阻挡敌人时每2秒对周围敌人造成120%攻击力真实伤害和0.1秒晕眩，未阻挡敌人时攻击附带30%攻击力的真实伤害",
+   "thresholds": []
+  },
+  {
+   "id": "siracusaShip",
+   "name": "叙拉古",
+   "category": "CORE",
+   "activate_at": 3,
+   "in_deck": false,
+   "power": true,
+   "desc": "【叙拉古】干员部署后攻击速度+(25+0.8×L)，持续(32+0.4×L)秒（受层数影响）\n【叙拉古】干员部署后还会进入等时长的隐匿状态，【叙拉古】干员在隐匿状态和脱离隐匿10秒内对敌人攻击时有3%概率造成(5000+50×L)（受层数影响）点真实伤害并恐惧目标3秒",
+   "thresholds": []
+  },
+  {
+   "id": "lateranoShip",
+   "name": "拉特兰",
+   "category": "CORE",
+   "activate_at": 3,
+   "in_deck": false,
+   "power": true,
+   "desc": "【拉特兰】干员开启技能时获得的弹药量+(5+1.5×L)%（受层数影响）\n任意【拉特兰】干员每消耗1发弹药，全体【拉特兰】干员攻击力+4%，至多+200%",
+   "thresholds": []
+  },
+  {
+   "id": "yanShip",
+   "name": "炎",
+   "category": "CORE",
+   "activate_at": 3,
+   "in_deck": false,
+   "power": true,
+   "desc": "【炎】干员攻击力+(23+0.9×L)%（受层数影响）\n战斗开始时收集【炎】干员部分属性召唤“炎佑”（其攻击力和生命值为【炎】干员攻击力和生命值总和的30%）；“炎佑”同时攻击3个目标，攻击附带20%攻击力的灼燃损伤，周围敌人受到20%的元素脆弱，周期性使用“祛恶之焰”\n改为召唤2只“炎佑”；“炎佑”攻击力提升至1.5倍，受到的伤害-90%",
+   "thresholds": []
+  },
+  {
+   "id": "victoriaShip",
+   "name": "维多利亚",
+   "category": "CORE",
+   "activate_at": 3,
+   "in_deck": false,
+   "power": true,
+   "desc": "携带装备的【维多利亚】干员伤害提升至(125+0.8×L)%（受层数影响）\n获得一件带有随机特殊效果的维式重锤\n【维多利亚】干员每携带1件装备攻击力+50%，携带进阶装备改为+80%",
+   "thresholds": []
+  },
+  {
+   "id": "sargonShip",
+   "name": "萨尔贡",
+   "category": "CORE",
+   "activate_at": 3,
+   "in_deck": false,
+   "power": true,
+   "desc": "【萨尔贡】干员开启技能时，所有【萨尔贡】干员攻击速度+12（至多+300），持续(5+0.22×L)秒（受层数影响）\n开启技能还会使所有【萨尔贡】干员攻击力+12%（至多+300%）\n选择策略【娜仁图亚】时，的效果会有所改变",
+   "thresholds": []
+  },
+  {
+   "id": "kjeragShip",
+   "name": "谢拉格",
+   "category": "CORE",
+   "activate_at": 3,
+   "in_deck": false,
+   "power": true,
+   "desc": "【谢拉格】干员伤害提升至125%，对寒冷和冻结敌人额外提升至(135+1×L)%（受层数影响）\n战场上每25秒吹过一阵寒风使敌人寒冷(20+0.1×L)秒（受层数影响）",
+   "thresholds": []
+  },
+  {
+   "id": "egirShip",
+   "name": "阿戈尔",
+   "category": "CORE",
+   "activate_at": 3,
+   "in_deck": false,
+   "power": true,
+   "desc": "【阿戈尔】干员生命值+(35+1×L)%（受层数影响）\n战斗开始时【阿戈尔】干员依次吞噬身前一格干员造成5000点物理伤害并获得其基础攻击力和阻挡数，并叠加等于被吞噬者等阶的盟约层数（【阿戈尔】之间优先更靠左和靠上的干员发起吞噬）\n前3名【阿戈尔】干员首次被击倒时立刻复活",
+   "thresholds": []
+  },
+  {
+   "id": "indomShip",
+   "name": "不屈",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "地面干员被击倒时，有(18+0.4×L)%（受层数影响）概率立刻重新部署\n地面干员被击倒时使场上所有干员技力+5",
+   "thresholds": []
+  },
+  {
+   "id": "deputShip",
+   "name": "助力",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "所有干员防御力+(15+1.2×L)%（受层数影响），再部署时间-30%\n休整期结束时，使当前所有已激活的盟约层数+2\n改为层数+4",
+   "thresholds": []
+  },
+  {
+   "id": "emptyShip",
+   "name": "协防干员",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "所有干员受到的物理和法术伤害-20%；【协防干员】伤害提升至120%，精锐【协防干员】造成伤害提升至140%",
+   "thresholds": []
+  },
+  {
+   "id": "steadShip",
+   "name": "坚守",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "所有干员生命值+(25+1.2×L)%（受层数影响）\n场上非【坚守】干员受到伤害时，所受伤害的40%由【坚守】干员平均承担；【坚守】干员受到伤害时，伤害来源受到(850+10×L)点法术伤害（受层数影响，每0.2秒至多触发1次）和持续5秒的40%的脆弱效果",
+   "thresholds": []
+  },
+  {
+   "id": "miraShip",
+   "name": "奇迹",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "刷新调度中心时，有(18+0.3×L)%（受层数影响）概率使下次刷新不消耗资金\n获得20资金\n整备区的【奇迹】干员也可用于激活盟约",
+   "thresholds": [],
+   "effects": {
+    "layer_rewards": {"every": 100, "gold": 20},
+    "free_refresh_chance": {"base_percent": 18, "per_layer_percent": 0.3}
+   }
+  },
+  {
+   "id": "arcaneShip",
+   "name": "奥术",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "【奥术】干员造成法术伤害时使目标受到的法术伤害提升(20+1×L)%（受层数影响），持续3秒\n【奥术】干员对生命值低于50%的敌人施加的伤害提升比例为(68+1.4×L)%（受层数影响）",
+   "thresholds": []
+  },
+  {
+   "id": "investShip",
+   "name": "投资人",
+   "category": "ADD_ON",
+   "activate_at": 3,
+   "in_deck": false,
+   "power": false,
+   "desc": "干员的“获得时”类特质每次触发2次\n“获得时”类特质每次触发3次\n整备区的【投资人】干员也可用于激活盟约",
+   "thresholds": []
+  },
+  {
+   "id": "skillfulShip",
+   "name": "灵巧",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "【灵巧】干员及周围4格的干员攻击速度+(10+1×L)（受层数影响）\n 生效范围变为【灵巧】干员周围8格",
+   "thresholds": []
+  },
+  {
+   "id": "soloShip",
+   "name": "独行",
+   "category": "ADD_ON",
+   "activate_at": 1,
+   "in_deck": false,
+   "power": false,
+   "desc": "【独行】干员攻击力和生命值+60%，初始技力+15（在场2名及以上【独行】干员时失效）",
+   "thresholds": [
+    2
+   ]
+  },
+  {
+   "id": "raidShip",
+   "name": "突袭",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "【突袭】干员10秒内未进行攻击或技能就绪时，若范围内没有敌人，则保留技力立即再部署至一名地面敌人周围，期间攻击力和生命值+(25+1×L)%（受层数影响）\n 所有干员攻击速度+50",
+   "thresholds": []
+  },
+  {
+   "id": "preciShip",
+   "name": "精准",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "【精准】干员攻击力+(10+1.2×L)%（受层数影响）\n生效范围变为所有【精准】干员和远程干员，且攻击无视30%防御力和法术抗性",
+   "thresholds": []
+  },
+  {
+   "id": "suntShip",
+   "name": "绝技",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "精锐状态的干员攻击力+30%\n精锐状态的干员技力消耗-30%\n（所有干员的精锐状态均可激活本盟约）",
+   "thresholds": []
+  },
+  {
+   "id": "maniShip",
+   "name": "调和",
+   "category": "ADD_ON",
+   "activate_at": 1,
+   "in_deck": false,
+   "power": false,
+   "desc": "激活时可以使场上核心盟约的激活人数+1，【调和】干员享受已激活的核心盟约的效果",
+   "thresholds": []
+  },
+  {
+   "id": "swiftShip",
+   "name": "迅捷",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "【迅捷】干员技能结束时有(20+0.35×L)%概率（受层数影响）立刻回复12点技力\n所有干员技能结束时有等概率额外回复15点技力",
+   "thresholds": []
+  },
+  {
+   "id": "visiShip",
+   "name": "远见",
+   "category": "ADD_ON",
+   "activate_at": 2,
+   "in_deck": false,
+   "power": false,
+   "desc": "获得一次2资金\n所有【远见】干员购买价格永久-1资金\n上述效果改为所有干员购买价格永久-1资金\n整备区的【远见】干员也可用于激活盟约",
+   "thresholds": [],
+   "effects": {
+    "layer_rewards": {"every": 10, "gold": 2},
+    "purchase_discounts": [
+     {"threshold": 80, "amount": 1, "scope": "bond"},
+     {"threshold": 150, "amount": 1, "scope": "all"}
+    ]
+   }
+  }
+ ]
+}

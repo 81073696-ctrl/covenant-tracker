@@ -1,0 +1,495 @@
+{
+ "items": [
+  {
+   "id": "band_lisa",
+   "name": "铃兰",
+   "hp": 20,
+   "effect_name": "御守之力",
+   "desc": "【御守之力】每个回合开始时，触发战场上一名干员的获得时效果一次（优先选择最靠右和最靠下）",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_vodfox",
+   "name": "巫恋",
+   "hp": 22,
+   "effect_name": "替身娃娃",
+   "desc": "【替身娃娃】每回合首次出售初始干员时，改为与调度中心中随机一名干员交换",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_jesica",
+   "name": "杰西卡",
+   "hp": 22,
+   "effect_name": "集结指示",
+   "desc": "【集结指示】在第4、7、10、13回合进入休整期时获得1个\n：装备时销毁，立即在调度中心中刷新三名与该干员盟约相同的干员，免费获得其中一名!（不超过当前调度中心等级）",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_chen",
+   "name": "陈",
+   "hp": 22,
+   "effect_name": "以己之长",
+   "desc": "【以己之长】所有干员造成的物理和法术伤害变为弱点伤害（根据敌人的防御力和法术抗性变更伤害类型）",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_pepe",
+   "name": "佩佩",
+   "hp": 23,
+   "effect_name": "博学多通",
+   "desc": "【博学多通】升级调度中心至2、4和6级后，获得1次特殊刷新：此次刷新出现的干员优先为干员\n在部分干员缺席时体验可能不完整",
+   "effects": {"refresh": {"type": "special", "on_levels": [2, 4, 6], "charges": 1}},
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_harold",
+   "name": "哈洛德",
+   "hp": 23,
+   "effect_name": "人才盲盒",
+   "desc": "【人才盲盒】从第4回合开始每2回合获得1名干员\n在部分干员缺席时体验可能不完整",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_justin",
+   "name": "小贾斯汀",
+   "hp": 23,
+   "effect_name": "私募基金",
+   "desc": "【私募基金】在第1、4、7、10回合进入休整期时获得1个\n：装备时随机获得1~6资金并销毁",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_chiave",
+   "name": "贾维",
+   "hp": 23,
+   "effect_name": "团伙行动",
+   "desc": "【团伙行动】主动刷新6次调度中心后获得一名不高于当前调度中心等级的干员（每回合至多获得2名）\n在部分干员缺席时体验可能不完整",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_pith",
+   "name": "Pith",
+   "hp": 24,
+   "effect_name": "优等生",
+   "desc": "【优等生】第1回合获得1名可以造成神经、灼燃、凋亡损伤的特殊干员，其属于调和盟约：可以使部分盟约人数计数+1",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_humus",
+   "name": "休谟斯",
+   "hp": 24,
+   "effect_name": "回收利用",
+   "desc": "【回收利用】地面干员技能结束时使周围四格随机1名干员获得3点技力",
+   "modes": [
+    "LOCAL",
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_sciurus",
+   "name": "休露丝",
+   "hp": 24,
+   "effect_name": "雪域礼赠",
+   "desc": "【雪域礼赠】每回合购买的首名干员消耗资金为1\n在部分干员缺席时体验可能不完整",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_makiri",
+   "name": "松桐",
+   "hp": 24,
+   "effect_name": "九流之缘",
+   "desc": "【九流之缘】偶数回合的休整期开始时，随机获得调度中心的一名干员",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_paganini",
+   "name": "潘格尼尼",
+   "hp": 24,
+   "effect_name": "定制铳械",
+   "desc": "【定制铳械】累计花费55资金后，获得1名4阶及以上随机的精锐干员\n在部分干员缺席时体验可能不完整",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_mlynar",
+   "name": "玛恩纳",
+   "hp": 24,
+   "effect_name": "业务指标",
+   "desc": "【业务指标】每购买一名干员，下回合开始时资金+1（每回合至多3资金）\n在部分干员缺席时体验可能不完整",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_fang",
+   "name": "芬",
+   "hp": 24,
+   "effect_name": "协力共进",
+   "desc": "【协力共进】第8、10、12、14回合时，获得1个\n：装备后销毁携带干员，并在调度中心刷新两名同等阶干员免费获取其中一名；原干员在下回合传递给对应盟约人数最多的队友",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_amiya",
+   "name": "阿米娅",
+   "hp": 25,
+   "effect_name": "众志合一",
+   "desc": "【众志合一】场上存在3、4或5种以上激活盟约时，所有干员攻击力、生命值分别+20/30/40%",
+   "modes": [
+    "LOCAL",
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_clementia",
+   "name": "克莱门莎",
+   "hp": 26,
+   "effect_name": "崇高牺牲",
+   "desc": "【崇高牺牲】干员被击倒时，提供等同于该干员等阶的盟约层数\n在部分干员缺席时体验可能不完整",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_cathy",
+   "name": "凯瑟琳",
+   "hp": 26,
+   "effect_name": "定向投放",
+   "desc": "【定向投放】每次升级调度中心时，在调度中心刷新随机3件装备，可以选择并获得其中1件",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_qalaisa",
+   "name": "卡莱莎",
+   "hp": 26,
+   "effect_name": "食腐之蝶",
+   "desc": "【食腐之蝶】我方干员被击倒时，场上剩余我方单位攻击力+20%（最大200%，持续至该干员被击倒或战斗结束）",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_emperor",
+   "name": "大帝",
+   "hp": 26,
+   "effect_name": "加急调派",
+   "desc": "【加急调派】我方干员每次部署后再部署时间减少50%",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_narant",
+   "name": "娜仁图亚",
+   "hp": 26,
+   "effect_name": "见者有份",
+   "desc": "【见者有份】偶数回合进入休整期时，调度中心特殊刷新两件装备，免费获取其中一件；萨尔贡盟约效果替换为【萨尔贡】干员技能开启后，周围八格干员同时享受该干员携带的不高于V阶的装备效果，持续60秒\n在部分干员缺席时体验可能不完整",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_kirara",
+   "name": "绮良",
+   "hp": 26,
+   "effect_name": "通关奖励",
+   "desc": "【通关奖励】每使用20资金，获得一名不高于当前调度中心等级的随机干员",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_yu",
+   "name": "余",
+   "hp": 27,
+   "effect_name": "文火慢炖",
+   "desc": "【文火慢炖】第8回合开始时，若仅激活了1个盟约，使其增加36层；否则使所有已激活盟约增加12层",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_cannot",
+   "name": "坎诺特",
+   "hp": 27,
+   "effect_name": "利滚利",
+   "desc": "【利滚利】每回合剩余的资金可以继承，剩余至少5资金时，每回合额外获得1资金",
+   "effects": {
+    "economy": {"gold_carry_over": true, "remaining_gold_threshold": 5, "income_bonus": 1}
+   },
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_ermengard",
+   "name": "埃芒加德",
+   "hp": 27,
+   "effect_name": "命结之秘",
+   "desc": "【命结之秘】战斗中前3个被击倒的干员立刻复活！",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_lmlee",
+   "name": "老鲤",
+   "hp": 27,
+   "effect_name": "得闲饮茶",
+   "desc": "【得闲饮茶】第1、2回合的资金暂存至第3回合发放；第3回合进入休整期时，获得2、4阶随机干员各1名",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_amedic",
+   "name": "Touch",
+   "hp": 28,
+   "effect_name": "外勤医疗",
+   "desc": "【外勤医疗】所有玩家场地上出现一名；战斗开始时，若场上至少有两名精锐干员，则替换为",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_bldsk",
+   "name": "华法琳",
+   "hp": 28,
+   "effect_name": "重点监护",
+   "desc": "【重点监护】开始作战时，使场上每个不同等阶的1个随机我方干员的所属盟约层数+2",
+   "modes": [
+    "LOCAL",
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_dusk",
+   "name": "夕",
+   "hp": 28,
+   "effect_name": "墨色真颜",
+   "desc": "【墨色真颜】若你的场上存在同名干员，这些干员攻击力+30%\n【幻画为真】第1回合获得1个特殊法术\n：使用后可以复制该法术范围内的1名干员（包括精锐状态和携带的装备）",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_mberry",
+   "name": "桑葚",
+   "hp": 28,
+   "effect_name": "药枚实验",
+   "desc": "【药枚实验】战斗开始时，使最右边的所有我方单位获得效果：每次攻击时有25%的概率获得1层护盾（最多1层）",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_mlyss",
+   "name": "缪尔赛思",
+   "hp": 28,
+   "effect_name": "至纯凝结",
+   "desc": "【至纯凝结】在第1回合开始时获得一个进阶\n进阶：任意干员可装备，立即使该干员晋升为精锐干员",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_malkie",
+   "name": "马克维茨",
+   "hp": 28,
+   "effect_name": "商业包装",
+   "desc": "【商业包装】初始获得1个\n：每出售8名任意干员后，获得1名装备者的同盟约普通干员",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_damaztic",
+   "name": "“变形者集群”",
+   "hp": 29,
+   "effect_name": "变形同构",
+   "desc": "【变形同构】每5回合获得1件特殊装备\n：与特定装备一同装备时装备者将视为特定盟约成员",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_ioleta",
+   "name": "伊奥莱塔·罗素",
+   "hp": 29,
+   "effect_name": "统御号令",
+   "desc": "【统御号令】战斗开始时，场上每有一个精锐干员，精锐干员的攻击力，生命值+10%",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_duyaoy",
+   "name": "杜遥夜",
+   "hp": 29,
+   "effect_name": "广交豪杰",
+   "desc": "【广交豪杰】每回合前2次主动刷新为特殊刷新：优先刷新出1名干员\n在部分干员缺席时体验可能不完整",
+   "effects": {"refresh": {"type": "special", "per_round": 2}},
+   "modes": [
+    "LOCAL",
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_ducklord",
+   "name": "鸭爵",
+   "hp": 29,
+   "effect_name": "“神秘顾客”",
+   "desc": "【“神秘顾客”】从第5回合起，你和队友遭遇的部分敌人可能会替换为，击倒这些敌人者获得1资金奖励（包括联防阶段）",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_doberm",
+   "name": "杜宾",
+   "hp": 30,
+   "effect_name": "加练！",
+   "desc": "【加练！】每2个回合获得1个特殊法术\n：使用后为下场战斗添加额外敌人，若自身战斗完美作战可获得资金",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_orchid",
+   "name": "梓兰",
+   "hp": 30,
+   "effect_name": "猎头顾问",
+   "desc": "【猎头顾问】每次主动刷新均变为特殊刷新：必定刷新2名同名干员，并冻结其中一名；第10回合获得1个\n：装备时销毁，立即在调度中心中刷新三名与该干员盟约相同的干员，免费获得其中一名!（不超过当前调度中心等级）",
+   "effects": {"refresh": {"type": "special", "scope": "all"}},
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_quintus",
+   "name": "昆图斯",
+   "hp": 31,
+   "effect_name": "不稳定要素",
+   "desc": "【不稳定要素】第3回合获得1件特殊装备\n：战斗结束后使装备者变为高一阶的随机干员（最高6阶）",
+   "modes": [
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  },
+  {
+   "id": "band_sarkazb",
+   "name": "歌利亚",
+   "hp": 45,
+   "effect_name": "坚不可摧",
+   "desc": "【坚不可摧】初始目标生命值为45点",
+   "modes": [
+    "LOCAL",
+    "SINGLE",
+    "MULTI"
+   ],
+   "victor_count": 3
+  }
+ ]
+}

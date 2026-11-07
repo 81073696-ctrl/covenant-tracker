@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Screen Lens · 识别工作台</title>
+<style>
+  :root{
+    --bg:#0c0e12; --panel:#14171d; --panel2:#1a1e26; --line:#2a2f3a;
+    --text:#e8e4da; --dim:#9aa1ad; --gold:#d9b36a; --gold2:#f0c987;
+    --ok:#5fbf8a; --warn:#e2b341; --bad:#d9695f; --info:#6aa7d9;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--text);font:13px/1.45 "Microsoft YaHei",system-ui,sans-serif}
+  header{display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid var(--line);background:linear-gradient(#181c24,#101319);position:sticky;top:0;z-index:5}
+  h1{font-size:15px;margin:0;color:var(--gold2);letter-spacing:.5px;font-weight:600}
+  .spacer{flex:1}
+  button{background:#20252f;color:var(--text);border:1px solid var(--line);border-radius:4px;padding:5px 10px;cursor:pointer;font:inherit}
+  button:hover{border-color:#4a5160;background:#262c37}
+  button.primary{background:linear-gradient(#3a2f1c,#2a2317);border-color:#6b5630;color:var(--gold2)}
+  button.on{border-color:var(--gold);color:var(--gold2);box-shadow:0 0 0 1px #6b5630 inset}
+  .pill{font-size:11px;padding:2px 7px;border-radius:9px;border:1px solid var(--line);color:var(--dim)}
+  .pill.ok{color:var(--ok);border-color:#2f5a44}
+  .pill.warn{color:var(--warn);border-color:#5a4a22}
+  .pill.bad{color:var(--bad);border-color:#5c2f2b}
+  .pill.skip{color:var(--dim)}
+  main{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr);gap:12px;padding:12px;align-items:start}
+  .stage{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px;position:relative}
+  .stage img{width:100%;display:block;border-radius:3px}
+  #boxes{position:absolute;left:8px;top:8px;right:8px;pointer-events:none;z-index:3}
+  #boxes .box{position:absolute;border:1px solid #d9b36a99;border-radius:2px}
+  #boxes .box.sel{border-color:#f0c987;background:#f0c98714;box-shadow:0 0 0 1px #6b563066}
+  #boxes .box span{position:absolute;left:-1px;top:-15px;font-size:10px;background:#0c0e12cc;color:#f0c987;padding:0 3px;border-radius:2px;white-space:nowrap}
+  #boxes .cbox{position:absolute;border:1px solid #5fbf8a66;border-radius:2px}
+  #boxes .cbox.miss{border-color:#d9695f66}
+  .side{display:flex;flex-direction:column;gap:10px;min-width:0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px}
+  .card h3{margin:0 0 8px;font-size:13px;color:var(--gold);font-weight:600}
+  .regions{display:flex;flex-direction:column;gap:8px;max-height:52vh;overflow:auto;padding-right:4px}
+  .region{border:1px solid var(--line);border-radius:5px;padding:8px;background:var(--panel2);cursor:pointer}
+  .region.sel{border-color:var(--gold);box-shadow:0 0 0 1px #6b5630 inset}
+  .region .top{display:flex;align-items:center;gap:8px}
+  .region .name{font-weight:600}
+  .region .meta{color:var(--dim);font-size:11px}
+  .region .row{display:flex;gap:8px;align-items:center;margin-top:6px;flex-wrap:wrap}
+  .region img.crop{max-height:44px;max-width:120px;border:1px solid #000;border-radius:3px;background:#000}
+  .gchips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+  .gchip{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:10px;color:var(--dim);background:#0f1319;border:1px solid var(--line);border-radius:3px;padding:3px 4px}
+  .gchip img{height:24px;border-radius:2px;background:#000}
+  .gchip b{color:var(--text);font-size:11px}
+  .gchip.weak b{color:var(--warn)}
+  .gchip.bad b{color:var(--bad)}
+  .slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+  .slot{border:1px solid var(--line);border-radius:4px;padding:4px;background:#10141a;cursor:pointer}
+  .slot:hover{border-color:#4a5160}
+  .slot img{width:100%;display:block;border-radius:2px;background:#000}
+  .slot .t{font-size:10px;color:var(--dim);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .slot .t b{color:var(--text)}
+  .slot .s{font-size:10px;color:var(--gold)}
+  .sug{margin:0;padding-left:16px;color:var(--dim)}
+  .sug li{margin:4px 0}
+  .thr{display:grid;grid-template-columns:110px 1fr 44px;gap:8px;align-items:center;margin:6px 0}
+  .thr input[type=range]{width:100%}
+  .thr output{color:var(--gold2);text-align:right}
+  .muted{color:var(--dim);font-size:11px}
+  .modal{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:20}
+  .modal.open{display:flex}
+  .modal .box{background:var(--panel);border:1px solid var(--gold);border-radius:8px;padding:14px;width:min(460px,92vw)}
+  .modal .box h3{margin:0 0 8px;color:var(--gold2)}
+  .modal input[type=search]{width:100%;padding:6px 8px;background:#0e1116;border:1px solid var(--line);color:var(--text);border-radius:4px}
+  .ops{max-height:240px;overflow:auto;margin:8px 0;border:1px solid var(--line);border-radius:4px}
+  .op{padding:5px 8px;cursor:pointer;border-bottom:1px solid #1d222b}
+  .op:hover,.op.sel{background:#232936}
+  .op .m{color:var(--dim);font-size:11px;margin-left:6px}
+  .toast{position:fixed;right:14px;bottom:14px;background:#1b2129;border:1px solid var(--line);border-left:3px solid var(--gold);padding:8px 12px;border-radius:4px;opacity:0;transform:translateY(6px);transition:.18s;z-index:30}
+  .toast.show{opacity:1;transform:none}
+  .cov{display:flex;gap:5px;flex-wrap:wrap}
+  .cov .d{min-width:26px;text-align:center;padding:3px 5px;border-radius:3px;border:1px solid #3a2f22;background:#1a140c;color:var(--dim);font-size:11px}
+  .cov .d.have{border-color:#2f5a44;background:#101a16;color:var(--ok)}
+  .cov .d.miss{border-color:#5a2f2b;background:#1a1010;color:var(--bad)}
+  .cov .d b{display:block;font-size:13px;color:inherit}
+  .cov .d span{font-size:9px;opacity:.8}
+  .obs{display:flex;flex-direction:column;gap:6px}
+  .obs .o{display:flex;align-items:center;gap:8px;padding:5px 7px;border:1px solid var(--line);border-radius:4px;background:#10141a}
+  .obs .o .k{color:var(--gold);font-size:11px;min-width:76px}
+  .obs .o .v{font-weight:600}
+  .obs .o .c{color:var(--dim);font-size:11px;margin-left:auto}
+  .obs .o.diff{border-color:#5a4a22;background:#1a160e}
+  .obs .o.diff .v{color:var(--warn)}
+  .cands{display:flex;gap:4px;flex-wrap:wrap;margin-top:3px}
+  .cands button{padding:1px 5px;font-size:10px;background:#151a22;border-color:#333b48}
+  .cands button:hover{border-color:var(--gold);color:var(--gold2)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Screen Lens</h1><span class="pill">截图 → 结构，只读</span>
+  <span class="pill" id="src">未连接</span>
+  <span class="pill" id="prof"></span>
+  <span class="spacer"></span>
+  <button id="btn-grab" class="primary">抓一帧</button>
+  <button id="btn-follow">跟随</button>
+  <button id="btn-report" title="把当前帧 + 诊断报告存到 var/reports/">导出诊断</button>
+  <button id="btn-copy" title="复制一段可粘贴的摘要">复制摘要</button>
+  <button id="btn-window">选择窗口</button>
+  <button id="btn-draw">画区域</button>
+</header>
+
+<main>
+  <section class="stage">
+    <img id="shot" alt="frame" />
+    <div id="boxes"></div>
+    <div class="muted" id="frame-hint" style="margin-top:6px">点「抓一帧」或打开「跟随」，每 2 秒自动刷新。</div>
+  </section>
+
+  <aside class="side">
+    <div class="card">
+      <h3>模板覆盖 <span class="muted" id="cov-note"></span></h3>
+      <div class="cov" id="cov"></div>
+    </div>
+    <div class="card">
+      <h3>这一帧会提交什么 <span class="muted">（只读预览，不写入）</span></h3>
+      <div class="obs" id="obs"></div>
+    </div>
+    <div class="card">
+      <h3>这一帧看见了什么</h3>
+      <div class="regions" id="regions"></div>
+    </div>
+    <div class="card">
+      <h3>为什么没过 / 该教什么</h3>
+      <ul class="sug" id="suggestions"></ul>
+    </div>
+    <div class="card">
+      <h3>阈值</h3>
+      <div class="thr"><label>数字</label><input type="range" id="t-digit" min="0.3" max="0.99" step="0.01"><output id="o-digit"></output></div>
+      <div class="thr"><label>商店卡</label><input type="range" id="t-icon" min="0.3" max="0.99" step="0.01"><output id="o-icon"></output></div>
+      <div class="thr"><label>单位</label><input type="range" id="t-unit" min="0.3" max="0.99" step="0.01"><output id="o-unit"></output></div>
+      <div class="thr"><label>星级</label><input type="range" id="t-star" min="0.3" max="0.99" step="0.01"><output id="o-star"></output></div>
+      <div class="muted">调低更容易「认出来」但更容易认错；调高更保守。改完自动保存。</div>
+    </div>
+  </aside>
+</main>
+
+<div class="modal" id="picker">
+  <div class="box">
+    <h3 id="pick-title">这是谁？</h3>
+    <input type="search" id="pick-search" placeholder="搜干员名 / id" />
+    <div class="ops" id="pick-ops"></div>
+    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
+      <button id="pick-cancel">取消</button>
+      <button id="pick-ok" class="primary">确定</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="/static/lens.js"></script>
+</body>
+</html>

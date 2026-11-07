@@ -1,0 +1,2344 @@
+{
+ "items": [
+  {
+   "id": "chess_char_1_06_a",
+   "name": "刺玫",
+   "tier": 1,
+   "bonds": [
+    "victoriaShip",
+    "deputShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_06_b",
+   "profession": "MEDIC",
+   "sub": "咒愈师",
+   "rarity": 5,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_10_a",
+   "name": "古米",
+   "tier": 1,
+   "bonds": [
+    "steadShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_10_b",
+   "profession": "TANK",
+   "sub": "守护者",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_11_a",
+   "name": "地灵",
+   "tier": 1,
+   "bonds": [
+    "miraShip",
+    "visiShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_11_b",
+   "profession": "SUPPORT",
+   "sub": "凝滞师",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_18_a",
+   "name": "宴",
+   "tier": 1,
+   "bonds": [
+    "raidShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_18_b",
+   "profession": "WARRIOR",
+   "sub": "武者",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_08_a",
+   "name": "德克萨斯",
+   "tier": 1,
+   "bonds": [
+    "soloShip",
+    "siracusaShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_08_b",
+   "profession": "PIONEER",
+   "sub": "尖兵",
+   "rarity": 5,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_03_a",
+   "name": "惊蛰",
+   "tier": 1,
+   "bonds": [
+    "yanShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_03_b",
+   "profession": "CASTER",
+   "sub": "链术师",
+   "rarity": 5,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_07_a",
+   "name": "普罗旺斯",
+   "tier": 1,
+   "bonds": [
+    "siracusaShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_07_b",
+   "profession": "SNIPER",
+   "sub": "重射手",
+   "rarity": 5,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_14_a",
+   "name": "格雷伊",
+   "tier": 1,
+   "bonds": [
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_14_b",
+   "profession": "CASTER",
+   "sub": "扩散术师",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_13_a",
+   "name": "波登可",
+   "tier": 1,
+   "bonds": [
+    "deputShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_13_b",
+   "profession": "SUPPORT",
+   "sub": "凝滞师",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_04_a",
+   "name": "深巡",
+   "tier": 1,
+   "bonds": [
+    "egirShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_04_b",
+   "profession": "TANK",
+   "sub": "哨戒铁卫",
+   "rarity": 5,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_17_a",
+   "name": "深靛",
+   "tier": 1,
+   "bonds": [
+    "arcaneShip",
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_17_b",
+   "profession": "CASTER",
+   "sub": "秘术师",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_15_a",
+   "name": "盟约·辅助干员",
+   "tier": 1,
+   "bonds": [
+    "maniShip",
+    "emptyShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_15_b",
+   "profession": "SUPPORT",
+   "sub": "巫役",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_05_a",
+   "name": "红豆",
+   "tier": 1,
+   "bonds": [
+    "indomShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_05_b",
+   "profession": "PIONEER",
+   "sub": "冲锋手",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_12_a",
+   "name": "艾丝黛尔",
+   "tier": 1,
+   "bonds": [
+    "sargonShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_12_b",
+   "profession": "WARRIOR",
+   "sub": "强攻手",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_02_a",
+   "name": "角峰",
+   "tier": 1,
+   "bonds": [
+    "kjeragShip",
+    "steadShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_02_b",
+   "profession": "TANK",
+   "sub": "铁卫",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_09_a",
+   "name": "跃跃",
+   "tier": 1,
+   "bonds": [
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_09_b",
+   "profession": "SNIPER",
+   "sub": "回环射手",
+   "rarity": 4,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_19_a",
+   "name": "野鬃",
+   "tier": 1,
+   "bonds": [
+    "kazimierzShip",
+    "swiftShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_19_b",
+   "profession": "PIONEER",
+   "sub": "冲锋手",
+   "rarity": 5,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_16_a",
+   "name": "锡人",
+   "tier": 1,
+   "bonds": [
+    "investShip",
+    "swiftShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_16_b",
+   "profession": "SPECIAL",
+   "sub": "炼金师",
+   "rarity": 5,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_01_a",
+   "name": "隐现",
+   "tier": 1,
+   "bonds": [
+    "lateranoShip",
+    "swiftShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_01_b",
+   "profession": "SNIPER",
+   "sub": "速射手",
+   "rarity": 5,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_1_20_a",
+   "name": "雷蛇",
+   "tier": 1,
+   "bonds": [
+    "indomShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_1_20_b",
+   "profession": "TANK",
+   "sub": "哨戒铁卫",
+   "rarity": 5,
+   "price": 2,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_09_a",
+   "name": "休谟斯",
+   "tier": 2,
+   "bonds": [
+    "raidShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_09_b",
+   "profession": "WARRIOR",
+   "sub": "收割者",
+   "rarity": 4,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_15_a",
+   "name": "协律",
+   "tier": 2,
+   "bonds": [
+    "arcaneShip",
+    "deputShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_15_b",
+   "profession": "CASTER",
+   "sub": "轰击术师",
+   "rarity": 4,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_05_a",
+   "name": "哈洛德",
+   "tier": 2,
+   "bonds": [
+    "kjeragShip",
+    "victoriaShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_05_b",
+   "profession": "MEDIC",
+   "sub": "行医",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_04_a",
+   "name": "小满",
+   "tier": 2,
+   "bonds": [
+    "yanShip",
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_04_b",
+   "profession": "SUPPORT",
+   "sub": "凝滞师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_03_a",
+   "name": "崖心",
+   "tier": 2,
+   "bonds": [
+    "kjeragShip",
+    "indomShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_03_b",
+   "profession": "SPECIAL",
+   "sub": "钩索师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_07_a",
+   "name": "幽灵鲨",
+   "tier": 2,
+   "bonds": [
+    "egirShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_07_b",
+   "profession": "WARRIOR",
+   "sub": "强攻手",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_17_a",
+   "name": "折桠",
+   "tier": 2,
+   "bonds": [
+    "steadShip",
+    "soloShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_17_b",
+   "profession": "TANK",
+   "sub": "不屈者",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_16_a",
+   "name": "拉普兰德",
+   "tier": 2,
+   "bonds": [
+    "siracusaShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_16_b",
+   "profession": "WARRIOR",
+   "sub": "领主",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_08_a",
+   "name": "泡泡",
+   "tier": 2,
+   "bonds": [
+    "sargonShip",
+    "steadShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_08_b",
+   "profession": "TANK",
+   "sub": "铁卫",
+   "rarity": 4,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_10_a",
+   "name": "洛洛",
+   "tier": 2,
+   "bonds": [
+    "victoriaShip",
+    "arcaneShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_10_b",
+   "profession": "CASTER",
+   "sub": "驭械术师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_18_a",
+   "name": "灰毫",
+   "tier": 2,
+   "bonds": [
+    "kazimierzShip",
+    "steadShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_18_b",
+   "profession": "TANK",
+   "sub": "要塞",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_12_a",
+   "name": "砾",
+   "tier": 2,
+   "bonds": [
+    "kazimierzShip",
+    "indomShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_12_b",
+   "profession": "SPECIAL",
+   "sub": "处决者",
+   "rarity": 4,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_06_a",
+   "name": "莎草",
+   "tier": 2,
+   "bonds": [
+    "sargonShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_06_b",
+   "profession": "MEDIC",
+   "sub": "链愈师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_13_a",
+   "name": "蒂比",
+   "tier": 2,
+   "bonds": [
+    "swiftShip",
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_13_b",
+   "profession": "SPECIAL",
+   "sub": "巡空者",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_14_a",
+   "name": "调香师",
+   "tier": 2,
+   "bonds": [
+    "deputShip",
+    "emptyShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_14_b",
+   "profession": "MEDIC",
+   "sub": "群愈师",
+   "rarity": 4,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_02_a",
+   "name": "赫默",
+   "tier": 2,
+   "bonds": [
+    "visiShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_02_b",
+   "profession": "MEDIC",
+   "sub": "医师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_01_a",
+   "name": "送葬人",
+   "tier": 2,
+   "bonds": [
+    "lateranoShip",
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_01_b",
+   "profession": "SNIPER",
+   "sub": "散射手",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_19_a",
+   "name": "锡人",
+   "tier": 2,
+   "bonds": [
+    "investShip",
+    "swiftShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_19_b",
+   "profession": "SPECIAL",
+   "sub": "炼金师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_2_11_a",
+   "name": "风丸",
+   "tier": 2,
+   "bonds": [
+    "miraShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_2_11_b",
+   "profession": "SPECIAL",
+   "sub": "傀儡师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 2
+  },
+  {
+   "id": "chess_char_3_19_a",
+   "name": "伺夜",
+   "tier": 3,
+   "bonds": [
+    "siracusaShip",
+    "miraShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_19_b",
+   "profession": "PIONEER",
+   "sub": "战术家",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_14_a",
+   "name": "初雪",
+   "tier": 3,
+   "bonds": [
+    "kjeragShip",
+    "visiShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_14_b",
+   "profession": "SUPPORT",
+   "sub": "削弱者",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_15_a",
+   "name": "巫恋",
+   "tier": 3,
+   "bonds": [
+    "siracusaShip",
+    "deputShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_15_b",
+   "profession": "SUPPORT",
+   "sub": "削弱者",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_18_a",
+   "name": "忍冬",
+   "tier": 3,
+   "bonds": [
+    "siracusaShip",
+    "swiftShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_3_18_b",
+   "profession": "PIONEER",
+   "sub": "尖兵",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_02_a",
+   "name": "断崖",
+   "tier": 3,
+   "bonds": [
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_02_b",
+   "profession": "WARRIOR",
+   "sub": "领主",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_05_a",
+   "name": "斯卡蒂",
+   "tier": 3,
+   "bonds": [
+    "egirShip",
+    "steadShip",
+    "raidShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_3_05_b",
+   "profession": "WARRIOR",
+   "sub": "无畏者",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_10_a",
+   "name": "松果",
+   "tier": 3,
+   "bonds": [
+    "swiftShip",
+    "emptyShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_10_b",
+   "profession": "SNIPER",
+   "sub": "散射手",
+   "rarity": 4,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_17_a",
+   "name": "流星",
+   "tier": 3,
+   "bonds": [
+    "kazimierzShip",
+    "soloShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_17_b",
+   "profession": "SNIPER",
+   "sub": "速射手",
+   "rarity": 4,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_09_a",
+   "name": "海霓",
+   "tier": 3,
+   "bonds": [
+    "egirShip",
+    "arcaneShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_09_b",
+   "profession": "SUPPORT",
+   "sub": "削弱者",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_04_a",
+   "name": "琳琅诗怀雅",
+   "tier": 3,
+   "bonds": [
+    "yanShip",
+    "investShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_3_04_b",
+   "profession": "SPECIAL",
+   "sub": "行商",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_12_a",
+   "name": "瑕光",
+   "tier": 3,
+   "bonds": [
+    "kazimierzShip",
+    "raidShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_3_12_b",
+   "profession": "TANK",
+   "sub": "守护者",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_21_a",
+   "name": "空弦",
+   "tier": 3,
+   "bonds": [
+    "lateranoShip",
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_3_21_b",
+   "profession": "SNIPER",
+   "sub": "速射手",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_20_a",
+   "name": "耶拉",
+   "tier": 3,
+   "bonds": [
+    "kjeragShip",
+    "deputShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_20_b",
+   "profession": "CASTER",
+   "sub": "驭械术师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_01_a",
+   "name": "能天使",
+   "tier": 3,
+   "bonds": [
+    "lateranoShip",
+    "miraShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_3_01_b",
+   "profession": "SNIPER",
+   "sub": "速射手",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_13_a",
+   "name": "至简",
+   "tier": 3,
+   "bonds": [
+    "sargonShip",
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_13_b",
+   "profession": "CASTER",
+   "sub": "驭械术师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_06_a",
+   "name": "菲莱",
+   "tier": 3,
+   "bonds": [
+    "sargonShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_06_b",
+   "profession": "TANK",
+   "sub": "本源铁卫",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_08_a",
+   "name": "薄绿",
+   "tier": 3,
+   "bonds": [
+    "victoriaShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_08_b",
+   "profession": "CASTER",
+   "sub": "阵法术师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_16_a",
+   "name": "蛇屠箱",
+   "tier": 3,
+   "bonds": [
+    "steadShip",
+    "indomShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_16_b",
+   "profession": "TANK",
+   "sub": "铁卫",
+   "rarity": 4,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_07_a",
+   "name": "见行者",
+   "tier": 3,
+   "bonds": [
+    "lateranoShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_07_b",
+   "profession": "SPECIAL",
+   "sub": "推击手",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_03_a",
+   "name": "诗怀雅",
+   "tier": 3,
+   "bonds": [
+    "yanShip",
+    "visiShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_03_b",
+   "profession": "WARRIOR",
+   "sub": "教官",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_3_11_a",
+   "name": "雪猎",
+   "tier": 3,
+   "bonds": [
+    "kjeragShip",
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_3_11_b",
+   "profession": "SNIPER",
+   "sub": "猎手",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_04_a",
+   "name": "伊内丝",
+   "tier": 4,
+   "bonds": [
+    "visiShip",
+    "raidShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_04_b",
+   "profession": "PIONEER",
+   "sub": "情报官",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_01_a",
+   "name": "信仰搅拌机",
+   "tier": 4,
+   "bonds": [
+    "lateranoShip",
+    "steadShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_01_b",
+   "profession": "TANK",
+   "sub": "哨戒铁卫",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_11_a",
+   "name": "凯瑟琳",
+   "tier": 4,
+   "bonds": [
+    "victoriaShip",
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_11_b",
+   "profession": "SUPPORT",
+   "sub": "工匠",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_26_a",
+   "name": "华法琳",
+   "tier": 4,
+   "bonds": [
+    "miraShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_26_b",
+   "profession": "MEDIC",
+   "sub": "医师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_24_a",
+   "name": "卡涅利安",
+   "tier": 4,
+   "bonds": [
+    "sargonShip",
+    "deputShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_24_b",
+   "profession": "CASTER",
+   "sub": "阵法术师",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_06_a",
+   "name": "寒芒克洛丝",
+   "tier": 4,
+   "bonds": [
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_06_b",
+   "profession": "SNIPER",
+   "sub": "速射手",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_15_a",
+   "name": "录武官",
+   "tier": 4,
+   "bonds": [
+    "yanShip",
+    "miraShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_15_b",
+   "profession": "MEDIC",
+   "sub": "医师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_17_a",
+   "name": "星熊",
+   "tier": 4,
+   "bonds": [
+    "yanShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_17_b",
+   "profession": "TANK",
+   "sub": "铁卫",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_12_a",
+   "name": "歌蕾蒂娅",
+   "tier": 4,
+   "bonds": [
+    "egirShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_12_b",
+   "profession": "SPECIAL",
+   "sub": "钩索师",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_09_a",
+   "name": "水月",
+   "tier": 4,
+   "bonds": [
+    "egirShip",
+    "soloShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_09_b",
+   "profession": "SPECIAL",
+   "sub": "伏击客",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_18_a",
+   "name": "泥岩",
+   "tier": 4,
+   "bonds": [
+    "soloShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_18_b",
+   "profession": "TANK",
+   "sub": "不屈者",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_13_a",
+   "name": "灵知",
+   "tier": 4,
+   "bonds": [
+    "kjeragShip",
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_13_b",
+   "profession": "SUPPORT",
+   "sub": "削弱者",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_19_a",
+   "name": "焰尾",
+   "tier": 4,
+   "bonds": [
+    "kazimierzShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_19_b",
+   "profession": "PIONEER",
+   "sub": "尖兵",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_08_a",
+   "name": "瑰盐",
+   "tier": 4,
+   "bonds": [
+    "emptyShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_08_b",
+   "profession": "MEDIC",
+   "sub": "群愈师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_21_a",
+   "name": "白面鸮",
+   "tier": 4,
+   "bonds": [
+    "deputShip",
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_21_b",
+   "profession": "MEDIC",
+   "sub": "群愈师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_23_a",
+   "name": "百炼嘉维尔",
+   "tier": 4,
+   "bonds": [
+    "sargonShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_23_b",
+   "profession": "WARRIOR",
+   "sub": "强攻手",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_16_a",
+   "name": "缄默德克萨斯",
+   "tier": 4,
+   "bonds": [
+    "siracusaShip",
+    "raidShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_16_b",
+   "profession": "SPECIAL",
+   "sub": "处决者",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_03_a",
+   "name": "耶拉",
+   "tier": 4,
+   "bonds": [
+    "kjeragShip",
+    "deputShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_03_b",
+   "profession": "CASTER",
+   "sub": "驭械术师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_02_a",
+   "name": "莫斯提马",
+   "tier": 4,
+   "bonds": [
+    "lateranoShip",
+    "arcaneShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_02_b",
+   "profession": "CASTER",
+   "sub": "扩散术师",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_14_a",
+   "name": "莱恩哈特",
+   "tier": 4,
+   "bonds": [
+    "swiftShip",
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_14_b",
+   "profession": "CASTER",
+   "sub": "扩散术师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_05_a",
+   "name": "蜜蜡",
+   "tier": 4,
+   "bonds": [
+    "sargonShip",
+    "deputShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_05_b",
+   "profession": "CASTER",
+   "sub": "阵法术师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_20_a",
+   "name": "远牙",
+   "tier": 4,
+   "bonds": [
+    "kazimierzShip",
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_20_b",
+   "profession": "SNIPER",
+   "sub": "神射手",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_22_a",
+   "name": "银灰",
+   "tier": 4,
+   "bonds": [
+    "kjeragShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_22_b",
+   "profession": "WARRIOR",
+   "sub": "领主",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_10_a",
+   "name": "阿罗玛",
+   "tier": 4,
+   "bonds": [
+    "siracusaShip",
+    "arcaneShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_10_b",
+   "profession": "CASTER",
+   "sub": "轰击术师",
+   "rarity": 5,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_07_a",
+   "name": "风笛",
+   "tier": 4,
+   "bonds": [
+    "victoriaShip",
+    "visiShip",
+    "indomShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_4_07_b",
+   "profession": "PIONEER",
+   "sub": "冲锋手",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_4_25_a",
+   "name": "魔王",
+   "tier": 4,
+   "bonds": [
+    "emptyShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_4_25_b",
+   "profession": "SUPPORT",
+   "sub": "吟游者",
+   "rarity": 6,
+   "price": 3,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_diy1_a",
+   "name": "chess_char_5_diy1_a",
+   "tier": 5,
+   "bonds": [],
+   "hidden": false,
+   "kind": "DIY",
+   "golden_id": "chess_char_5_diy1_b",
+   "profession": "",
+   "sub": "",
+   "rarity": 0,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_diy2_a",
+   "name": "chess_char_5_diy2_a",
+   "tier": 5,
+   "bonds": [],
+   "hidden": false,
+   "kind": "DIY",
+   "golden_id": "chess_char_5_diy2_b",
+   "profession": "",
+   "sub": "",
+   "rarity": 0,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_05_a",
+   "name": "乌尔比安",
+   "tier": 5,
+   "bonds": [
+    "egirShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_05_b",
+   "profession": "WARRIOR",
+   "sub": "重剑手",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_14_a",
+   "name": "凛御银灰",
+   "tier": 5,
+   "bonds": [
+    "kjeragShip",
+    "investShip",
+    "swiftShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_14_b",
+   "profession": "PIONEER",
+   "sub": "策士",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_04_a",
+   "name": "华法琳",
+   "tier": 5,
+   "bonds": [
+    "miraShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_5_04_b",
+   "profession": "MEDIC",
+   "sub": "医师",
+   "rarity": 5,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_07_a",
+   "name": "史尔特尔",
+   "tier": 5,
+   "bonds": [
+    "raidShip",
+    "arcaneShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_07_b",
+   "profession": "WARRIOR",
+   "sub": "术战者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_08_a",
+   "name": "号角",
+   "tier": 5,
+   "bonds": [
+    "victoriaShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_08_b",
+   "profession": "TANK",
+   "sub": "要塞",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_01_a",
+   "name": "圣约送葬人",
+   "tier": 5,
+   "bonds": [
+    "lateranoShip",
+    "visiShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_01_b",
+   "profession": "WARRIOR",
+   "sub": "收割者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_11_a",
+   "name": "塞雷娅",
+   "tier": 5,
+   "bonds": [
+    "steadShip",
+    "soloShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_11_b",
+   "profession": "TANK",
+   "sub": "守护者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_12_a",
+   "name": "夕",
+   "tier": 5,
+   "bonds": [
+    "yanShip",
+    "arcaneShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_12_b",
+   "profession": "CASTER",
+   "sub": "扩散术师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_22_a",
+   "name": "妮芙",
+   "tier": 5,
+   "bonds": [
+    "swiftShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_22_b",
+   "profession": "CASTER",
+   "sub": "本源术师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_20_a",
+   "name": "安洁莉娜",
+   "tier": 5,
+   "bonds": [
+    "siracusaShip",
+    "miraShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_20_b",
+   "profession": "SUPPORT",
+   "sub": "凝滞师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_21_a",
+   "name": "寒檀",
+   "tier": 5,
+   "bonds": [
+    "visiShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_5_21_b",
+   "profession": "CASTER",
+   "sub": "扩散术师",
+   "rarity": 5,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_17_a",
+   "name": "山",
+   "tier": 5,
+   "bonds": [
+    "investShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_17_b",
+   "profession": "WARRIOR",
+   "sub": "斗士",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_15_a",
+   "name": "引星棘刺",
+   "tier": 5,
+   "bonds": [
+    "swiftShip",
+    "miraShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_15_b",
+   "profession": "SPECIAL",
+   "sub": "炼金师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_13_a",
+   "name": "归溟幽灵鲨",
+   "tier": 5,
+   "bonds": [
+    "egirShip",
+    "indomShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_13_b",
+   "profession": "SPECIAL",
+   "sub": "傀儡师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_23_a",
+   "name": "录武官",
+   "tier": 5,
+   "bonds": [
+    "yanShip",
+    "miraShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_5_23_b",
+   "profession": "MEDIC",
+   "sub": "医师",
+   "rarity": 5,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_03_a",
+   "name": "烛煌",
+   "tier": 5,
+   "bonds": [
+    "victoriaShip",
+    "yanShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_03_b",
+   "profession": "CASTER",
+   "sub": "本源术师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_19_a",
+   "name": "玛恩纳",
+   "tier": 5,
+   "bonds": [
+    "kazimierzShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_19_b",
+   "profession": "WARRIOR",
+   "sub": "解放者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_16_a",
+   "name": "白面鸮",
+   "tier": 5,
+   "bonds": [
+    "deputShip",
+    "skillfulShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_5_16_b",
+   "profession": "MEDIC",
+   "sub": "群愈师",
+   "rarity": 5,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_18_a",
+   "name": "百炼嘉维尔",
+   "tier": 5,
+   "bonds": [
+    "sargonShip"
+   ],
+   "hidden": true,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_18_b",
+   "profession": "WARRIOR",
+   "sub": "强攻手",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_02_a",
+   "name": "缇缇",
+   "tier": 5,
+   "bonds": [
+    "sargonShip",
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_02_b",
+   "profession": "MEDIC",
+   "sub": "咒愈师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_10_a",
+   "name": "铃兰",
+   "tier": 5,
+   "bonds": [
+    "siracusaShip",
+    "emptyShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_10_b",
+   "profession": "SUPPORT",
+   "sub": "凝滞师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_06_a",
+   "name": "隐德来希",
+   "tier": 5,
+   "bonds": [
+    "indomShip",
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_5_06_b",
+   "profession": "WARRIOR",
+   "sub": "收割者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_5_09_a",
+   "name": "魔王",
+   "tier": 5,
+   "bonds": [
+    "emptyShip"
+   ],
+   "hidden": true,
+   "kind": "PRESET",
+   "golden_id": "chess_char_5_09_b",
+   "profession": "SUPPORT",
+   "sub": "吟游者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_diy1_a",
+   "name": "chess_char_6_diy1_a",
+   "tier": 6,
+   "bonds": [],
+   "hidden": false,
+   "kind": "DIY",
+   "golden_id": "chess_char_6_diy1_b",
+   "profession": "",
+   "sub": "",
+   "rarity": 0,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_diy2_a",
+   "name": "chess_char_6_diy2_a",
+   "tier": 6,
+   "bonds": [],
+   "hidden": false,
+   "kind": "DIY",
+   "golden_id": "chess_char_6_diy2_b",
+   "profession": "",
+   "sub": "",
+   "rarity": 0,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_15_a",
+   "name": "仇白",
+   "tier": 6,
+   "bonds": [
+    "yanShip",
+    "raidShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_15_b",
+   "profession": "WARRIOR",
+   "sub": "领主",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_03_a",
+   "name": "余",
+   "tier": 6,
+   "bonds": [
+    "yanShip",
+    "steadShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_03_b",
+   "profession": "TANK",
+   "sub": "本源铁卫",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_06_a",
+   "name": "佩佩",
+   "tier": 6,
+   "bonds": [
+    "sargonShip",
+    "indomShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_06_b",
+   "profession": "WARRIOR",
+   "sub": "撼地者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_02_a",
+   "name": "圣聆初雪",
+   "tier": 6,
+   "bonds": [
+    "kjeragShip",
+    "arcaneShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_02_b",
+   "profession": "CASTER",
+   "sub": "阵法术师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_09_a",
+   "name": "塑心",
+   "tier": 6,
+   "bonds": [
+    "lateranoShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_09_b",
+   "profession": "SUPPORT",
+   "sub": "巫役",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_10_a",
+   "name": "妮芙",
+   "tier": 6,
+   "bonds": [
+    "swiftShip"
+   ],
+   "hidden": true,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_10_b",
+   "profession": "CASTER",
+   "sub": "本源术师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_05_a",
+   "name": "异客",
+   "tier": 6,
+   "bonds": [
+    "sargonShip",
+    "swiftShip",
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_05_b",
+   "profession": "CASTER",
+   "sub": "链术师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_13_a",
+   "name": "新约能天使",
+   "tier": 6,
+   "bonds": [
+    "lateranoShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_13_b",
+   "profession": "SPECIAL",
+   "sub": "怪杰",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_14_a",
+   "name": "流明",
+   "tier": 6,
+   "bonds": [
+    "deputShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_6_14_b",
+   "profession": "MEDIC",
+   "sub": "疗养师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_04_a",
+   "name": "浊心斯卡蒂",
+   "tier": 6,
+   "bonds": [
+    "egirShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_04_b",
+   "profession": "SUPPORT",
+   "sub": "吟游者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_16_a",
+   "name": "溯光星源",
+   "tier": 6,
+   "bonds": [
+    "arcaneShip",
+    "skillfulShip"
+   ],
+   "hidden": false,
+   "kind": "PRESET",
+   "golden_id": "chess_char_6_16_b",
+   "profession": "SUPPORT",
+   "sub": "凝滞师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_08_a",
+   "name": "焰影苇草",
+   "tier": 6,
+   "bonds": [
+    "victoriaShip",
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_08_b",
+   "profession": "MEDIC",
+   "sub": "咒愈师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_20_a",
+   "name": "纯烬艾雅法拉",
+   "tier": 6,
+   "bonds": [
+    "deputShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_20_b",
+   "profession": "MEDIC",
+   "sub": "行医",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_07_a",
+   "name": "维娜·维多利亚",
+   "tier": 6,
+   "bonds": [
+    "victoriaShip",
+    "miraShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_07_b",
+   "profession": "WARRIOR",
+   "sub": "术战者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_11_a",
+   "name": "缪尔赛思",
+   "tier": 6,
+   "bonds": [
+    "maniShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_11_b",
+   "profession": "PIONEER",
+   "sub": "战术家",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_17_a",
+   "name": "耀骑士临光",
+   "tier": 6,
+   "bonds": [
+    "kazimierzShip",
+    "raidShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_17_b",
+   "profession": "WARRIOR",
+   "sub": "无畏者",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_18_a",
+   "name": "荒芜拉普兰德",
+   "tier": 6,
+   "bonds": [
+    "siracusaShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_18_b",
+   "profession": "CASTER",
+   "sub": "驭械术师",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_01_a",
+   "name": "蕾缪安",
+   "tier": 6,
+   "bonds": [
+    "lateranoShip",
+    "preciShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_01_b",
+   "profession": "SNIPER",
+   "sub": "神射手",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_12_a",
+   "name": "迷迭香",
+   "tier": 6,
+   "bonds": [
+    "preciShip",
+    "visiShip",
+    "emptyShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_12_b",
+   "profession": "SNIPER",
+   "sub": "投掷手",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  },
+  {
+   "id": "chess_char_6_19_a",
+   "name": "锏",
+   "tier": 6,
+   "bonds": [
+    "kjeragShip",
+    "kazimierzShip",
+    "swiftShip"
+   ],
+   "hidden": false,
+   "kind": "NORMAL",
+   "golden_id": "chess_char_6_19_b",
+   "profession": "WARRIOR",
+   "sub": "剑豪",
+   "rarity": 6,
+   "price": 4,
+   "sell": 1,
+   "merge_num": 3
+  }
+ ]
+}
