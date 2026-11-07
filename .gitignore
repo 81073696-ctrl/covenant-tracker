@@ -1,0 +1,27 @@
+# 运行时产物（存档、布局、学到的模板、诊断报告）
+var/
+isolated-var/
+logs/
+*.log
+
+# 本地配置与凭据（切勿提交）
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 临时脚本 / 参考数据（体积大，不入库）
+_tmp_*.py
+_refs/
+
+# 系统
+Thumbs.db
+.DS_Store
+dist/
+build/
+
