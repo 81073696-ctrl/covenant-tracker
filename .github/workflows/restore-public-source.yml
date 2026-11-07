@@ -32,6 +32,10 @@ jobs:
               assert 'archive/screen-lens-history.bundle' in names
               assert all(not name.startswith('/') and '..' not in Path(name).parts for name in names)
               source.extractall(staging)
+          (staging / '.github/workflows/test.yml').unlink()
+          workflow_dir = staging / '.github/workflows'
+          workflow_dir.mkdir(parents=True, exist_ok=True)
+          shutil.copy2(root / '.github/workflows/restore-public-source.yml', workflow_dir / 'restore-public-source.yml')
           for item in list(root.iterdir()):
               if item.name in {'.git', '.import-staging'}:
                   continue
